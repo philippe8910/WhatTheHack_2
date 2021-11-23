@@ -70,6 +70,7 @@ public class PlayerNetwork : EntityBehaviour<ICustomPlayerState>
         if (other.gameObject.tag == "Player")
         {
             _PlayerBehaviour = PlayerBehaviour.IDLE;
+            state.IsHard = false;
         }
 
         if (other.gameObject.tag == "Killer")

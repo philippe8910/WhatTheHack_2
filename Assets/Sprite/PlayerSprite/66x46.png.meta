@@ -87,8 +87,8 @@ TextureImporter:
   textureSettings:
     serializedVersion: 2
     filterMode: 0
-    aniso: -1
-    mipBias: -100
+    aniso: 1
+    mipBias: 0
     wrapU: 1
     wrapV: 1
     wrapW: 1
@@ -148,10 +148,10 @@ TextureImporter:
       name: 66x46_0
       rect:
         serializedVersion: 2
-        x: 70
-        y: 384
-        width: 169
-        height: 168
+        x: 0
+        y: 383.3333
+        width: 275
+        height: 191.66667
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -169,10 +169,10 @@ TextureImporter:
       name: 66x46_1
       rect:
         serializedVersion: 2
-        x: 346
-        y: 386
-        width: 169
-        height: 165
+        x: 275
+        y: 383.3333
+        width: 275
+        height: 191.66667
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -190,10 +190,10 @@ TextureImporter:
       name: 66x46_2
       rect:
         serializedVersion: 2
-        x: 620
-        y: 386
-        width: 169
-        height: 165
+        x: 550
+        y: 383.3333
+        width: 275
+        height: 191.66667
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -211,10 +211,10 @@ TextureImporter:
       name: 66x46_3
       rect:
         serializedVersion: 2
-        x: 895
-        y: 386
-        width: 171
-        height: 164
+        x: 825
+        y: 383.3333
+        width: 275
+        height: 191.66667
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -232,10 +232,10 @@ TextureImporter:
       name: 66x46_4
       rect:
         serializedVersion: 2
-        x: 1169
-        y: 386
-        width: 171
-        height: 165
+        x: 1100
+        y: 383.3333
+        width: 275
+        height: 191.66667
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -253,10 +253,10 @@ TextureImporter:
       name: 66x46_5
       rect:
         serializedVersion: 2
-        x: 1445
-        y: 386
-        width: 170
-        height: 166
+        x: 1375
+        y: 383.3333
+        width: 275
+        height: 191.66667
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -274,10 +274,10 @@ TextureImporter:
       name: 66x46_6
       rect:
         serializedVersion: 2
-        x: 56
-        y: 194
-        width: 208
-        height: 182
+        x: 0
+        y: 192.33333
+        width: 275
+        height: 191.66667
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -295,10 +295,10 @@ TextureImporter:
       name: 66x46_7
       rect:
         serializedVersion: 2
-        x: 322
-        y: 193
-        width: 218
-        height: 181
+        x: 275
+        y: 192.33333
+        width: 275
+        height: 191.66667
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -316,10 +316,10 @@ TextureImporter:
       name: 66x46_8
       rect:
         serializedVersion: 2
-        x: 583
-        y: 193
-        width: 238
-        height: 180
+        x: 550
+        y: 192.33333
+        width: 275
+        height: 191.66667
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -337,10 +337,10 @@ TextureImporter:
       name: 66x46_9
       rect:
         serializedVersion: 2
-        x: 867
-        y: 192
-        width: 227
-        height: 179
+        x: 825
+        y: 192.33333
+        width: 275
+        height: 191.66667
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -358,10 +358,10 @@ TextureImporter:
       name: 66x46_10
       rect:
         serializedVersion: 2
-        x: 1166
-        y: 196
-        width: 200
-        height: 179
+        x: 1100
+        y: 192.33333
+        width: 275
+        height: 191.66667
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -379,10 +379,10 @@ TextureImporter:
       name: 66x46_11
       rect:
         serializedVersion: 2
-        x: 1443
-        y: 195
-        width: 195
-        height: 182
+        x: 1375
+        y: 192.33333
+        width: 275
+        height: 191.66667
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -400,10 +400,10 @@ TextureImporter:
       name: 66x46_12
       rect:
         serializedVersion: 2
-        x: 73
-        y: 3
-        width: 185
-        height: 171
+        x: 0
+        y: 1.3333282
+        width: 275
+        height: 191.66667
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -421,10 +421,10 @@ TextureImporter:
       name: 66x46_13
       rect:
         serializedVersion: 2
-        x: 306
-        y: 3
-        width: 206
-        height: 185
+        x: 275
+        y: 1.3333282
+        width: 275
+        height: 191.66667
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -442,10 +442,10 @@ TextureImporter:
       name: 66x46_14
       rect:
         serializedVersion: 2
-        x: 573
-        y: 4
-        width: 196
-        height: 188
+        x: 550
+        y: 1.3333282
+        width: 275
+        height: 191.66667
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -463,10 +463,10 @@ TextureImporter:
       name: 66x46_15
       rect:
         serializedVersion: 2
-        x: 829
-        y: 4
-        width: 186
-        height: 186
+        x: 825
+        y: 1.3333282
+        width: 275
+        height: 191.66667
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -484,10 +484,10 @@ TextureImporter:
       name: 66x46_16
       rect:
         serializedVersion: 2
-        x: 1138
-        y: 5
-        width: 194
-        height: 170
+        x: 1100
+        y: 1.3333282
+        width: 275
+        height: 191.66667
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -505,10 +505,10 @@ TextureImporter:
       name: 66x46_17
       rect:
         serializedVersion: 2
-        x: 1442
-        y: 2
-        width: 176
-        height: 173
+        x: 1375
+        y: 1.3333282
+        width: 275
+        height: 191.66667
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}

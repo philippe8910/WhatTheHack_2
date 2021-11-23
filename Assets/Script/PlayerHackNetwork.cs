@@ -5,7 +5,7 @@ using Photon.Bolt;
 using UnityEditor;
 using UnityEngine;
 
-public class PlayerNetwork : EntityBehaviour<ICustomPlayerState>
+public class PlayerHackNetwork : EntityBehaviour<ICustomPlayerHackState>
 {
     [Header("Value")] 
     
@@ -35,8 +35,8 @@ public class PlayerNetwork : EntityBehaviour<ICustomPlayerState>
     // Start is called before the first frame update
     public override void Attached()
     {
-        state.SetTransforms(state.PlayerTransform , transform);
-        state.SetTransforms(state.PlayerAnimatorTransform , PlayerSprite.transform);
+        state.SetTransforms(state.PlayeHackrTransform , transform);
+        state.SetTransforms(state.PlayerAnimatorTransformHack , PlayerSprite.transform);
         state.SetAnimator(_animator);
 
         rigidbody2D = GetComponent<Rigidbody2D>();
@@ -106,7 +106,7 @@ public class PlayerNetwork : EntityBehaviour<ICustomPlayerState>
         }
         else
         {
-            if (state.IsMove)
+            if (state.IsMoveHack)
             {
                 state.Animator.Play(RUN);
             }
@@ -148,13 +148,13 @@ public class PlayerNetwork : EntityBehaviour<ICustomPlayerState>
             {
                 _PlayerBehaviour = PlayerBehaviour.RUN;
 
-                state.IsMove = true;
+                state.IsMoveHack = true;
             }
             else
             {
                 _PlayerBehaviour = PlayerBehaviour.IDLE;
 
-                state.IsMove = false;
+                state.IsMoveHack = false;
             }
         }
     }

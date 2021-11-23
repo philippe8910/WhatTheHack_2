@@ -40,6 +40,9 @@ public class PlayerHackNetwork : EntityBehaviour<ICustomPlayerHackState>
         state.SetAnimator(_animator);
 
         rigidbody2D = GetComponent<Rigidbody2D>();
+
+
+       
         //PlayerHud = GameObject.Find("PlayerHUD").GetComponent<PlayerHUD>();
         
         //Camera.main.transform.parent = transform;

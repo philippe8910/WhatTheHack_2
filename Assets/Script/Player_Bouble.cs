@@ -10,7 +10,8 @@ enum PlayerBehaviour
     RUN,
     Repiaring,
     Hard,
-    Die
+    Die,
+    Dash
 }
 
 public class Player_Bouble : MonoBehaviour
@@ -122,6 +123,7 @@ public class Player_Bouble : MonoBehaviour
         {
             _PlayerBehaviour = PlayerBehaviour.IDLE;
         }
+
 
         if (_PlayerBehaviour != PlayerBehaviour.Hard && _PlayerBehaviour != PlayerBehaviour.Repiaring)
         {

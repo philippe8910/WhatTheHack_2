@@ -8,7 +8,7 @@ using UnityEngine;
 
 public class NetworkCallBack : GlobalEventListener
 {
-    [SerializeField] private GameObject Hack , Bouble , FOV;
+    [SerializeField] private GameObject Hack , Bouble , FOV , Camera;
     
     public override void SceneLoadLocalDone(string scene, IProtocolToken token)
     {
@@ -26,8 +26,13 @@ public class NetworkCallBack : GlobalEventListener
         }
         
         GameObject _FOV = Instantiate(FOV, Vector3.zero, Quaternion.identity);
+        //GameObject Cam = Instantiate(Camera, _Player.transform.position, Quaternion.identity);
+        
+        
         _Player.GetComponent<CharacterView>().fovprefab = _FOV;
         _Player.GetComponent<CharacterView>().fovScript = _FOV.GetComponent<FieldOfView>();
+
+        //Cam.GetComponent<FollowTarget>().objetivo = _Player.transform;
 
     }
 }

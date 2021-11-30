@@ -344,6 +344,7 @@ MonoBehaviour:
   Hack: {fileID: 8420949427980107782, guid: 58d9554bc55579d43a075e55e2227aa2, type: 3}
   Bouble: {fileID: 1862175297743749646, guid: caac5464986ff1f419d1a97912ae0a66, type: 3}
   FOV: {fileID: 7745397468833441024, guid: ae6866bf01eeb414c942bf2d3d1d85de, type: 3}
+  Camera: {fileID: 8046530482643911412, guid: 4e3addc7887e9f642a507ece3f954f5f, type: 3}
 --- !u!1 &1305332972
 GameObject:
   m_ObjectHideFlags: 0

@@ -20,6 +20,22 @@ public class FieldOfView : MonoBehaviour
         GetComponent<MeshFilter>().mesh = mesh;
         mesh.RecalculateBounds();
         origen = Vector3.zero;
+        StartCoroutine("ChangeFOV");
+    }
+
+    private IEnumerator ChangeFOV()
+    {
+        if (numAristas == 360)
+        {
+            numAristas--;
+        }
+        else
+        {
+            numAristas++;
+        }
+
+        yield return new WaitForSeconds(0.1f);
+        yield return StartCoroutine("ChangeFOV");
     }
 
     private void LateUpdate()

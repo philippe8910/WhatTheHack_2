@@ -9,7 +9,8 @@ enum PlayerBehaviour
     IDLE,
     RUN,
     Repiaring,
-    Hard
+    Hard,
+    Die
 }
 
 public class Player_Bouble : MonoBehaviour

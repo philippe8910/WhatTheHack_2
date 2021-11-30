@@ -101,29 +101,36 @@ public class PlayerNetwork : EntityBehaviour<ICustomPlayerState>
 
     public virtual void ControllAnimator()
     {
-        if (state.IsFix)
+        if (!state.IsDie)
         {
-            state.Animator.Play(FIX);
-        }
-        else
-        {
-            if (state.IsHard)
+            if (state.IsFix)
             {
-                PlayerHud.PlayerFreeze();
-                state.Animator.Play(HARD);
+                state.Animator.Play(FIX);
             }
             else
             {
-                if (state.IsMove)
+                if (state.IsHard)
                 {
-                    PlayerHud.PlayerNormal();
-                    state.Animator.Play(RUN);
+                    PlayerHud.PlayerFreeze();
+                    state.Animator.Play(HARD);
                 }
                 else
                 {
-                    state.Animator.Play(IDLE);
+                    if (state.IsMove)
+                    {
+                        PlayerHud.PlayerNormal();
+                        state.Animator.Play(RUN);
+                    }
+                    else
+                    {
+                        state.Animator.Play(IDLE);
+                    }
                 }
             }
+        }
+        else
+        {
+            state.Animator.Play(DIE);
         }
         
     }
@@ -153,7 +160,7 @@ public class PlayerNetwork : EntityBehaviour<ICustomPlayerState>
         }
         
 
-        if (_PlayerBehaviour != PlayerBehaviour.Hard && _PlayerBehaviour != PlayerBehaviour.Repiaring)
+        if (_PlayerBehaviour != PlayerBehaviour.Hard && _PlayerBehaviour != PlayerBehaviour.Repiaring && _PlayerBehaviour != PlayerBehaviour.Die)
         {
             if ((Input.GetAxisRaw("Horizontal") != 0 || Input.GetAxisRaw("Vertical") != 0))
             {
@@ -209,5 +216,11 @@ public class PlayerNetwork : EntityBehaviour<ICustomPlayerState>
             // PlayerSprite.transform.localScale = 
             //    new Vector3(Mathf.Abs(PlayerSprite.transform.localScale.x) , PlayerSprite.transform.localScale.y , PlayerSprite.transform.localScale.z);
         }
+    }
+
+    public void PlayerOnAttack()
+    {
+        _PlayerBehaviour = PlayerBehaviour.Die;
+        state.IsDie = true;
     }
 }

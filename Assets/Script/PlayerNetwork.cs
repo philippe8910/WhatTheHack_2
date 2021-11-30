@@ -38,8 +38,11 @@ public class PlayerNetwork : EntityBehaviour<ICustomPlayerState>
         state.SetTransforms(state.PlayerTransform , transform);
         state.SetTransforms(state.PlayerAnimatorTransform , PlayerSprite.transform);
         state.SetAnimator(_animator);
+        state.OnDie = PlayerOnAttack;
 
         rigidbody2D = GetComponent<Rigidbody2D>();
+        
+        
         //PlayerHud = GameObject.Find("PlayerHUD").GetComponent<PlayerHUD>();
         
         //Camera.main.transform.parent = transform;
@@ -228,9 +231,6 @@ public class PlayerNetwork : EntityBehaviour<ICustomPlayerState>
 
     public void PlayerOnAttack()
     {
-        Debug.Log(state.IsDie);
-        
-        _PlayerBehaviour = PlayerBehaviour.Die;
-        state.IsDie = true;
+        state.Die();
     }
 }

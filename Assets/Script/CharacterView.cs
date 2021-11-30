@@ -22,7 +22,7 @@ public class CharacterView: MonoBehaviour
     void Update()
     {
        
-       fovScript.SetOrigin(transform.position);
+       fovScript.SetOrigin(transform.localPosition);
     }
     
 

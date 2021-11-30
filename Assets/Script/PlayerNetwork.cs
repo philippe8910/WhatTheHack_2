@@ -154,9 +154,17 @@ public class PlayerNetwork : EntityBehaviour<ICustomPlayerState>
 
     public virtual void AnimatorControll()
     {
-        
+     
     }
 
+
+    public IEnumerator PlayerDash()
+    {
+        if (Input.GetMouseButtonDown(2))
+        {
+            _PlayerBehaviour = PlayerBehaviour.Dash;
+        }
+    }
     public virtual void StateMachineControll()
     {
         if (Input.GetMouseButtonDown(1))

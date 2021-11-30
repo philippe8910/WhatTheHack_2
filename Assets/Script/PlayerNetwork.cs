@@ -61,6 +61,7 @@ public class PlayerNetwork : EntityBehaviour<ICustomPlayerState>
     public void IsDieCallBack()
     {
         IsDie = state.IsDie;
+        Debug.Log(state.IsDie);
     }
 
     private void Update()
@@ -242,8 +243,6 @@ public class PlayerNetwork : EntityBehaviour<ICustomPlayerState>
     {
         state.IsDie = true;
         _PlayerBehaviour = PlayerBehaviour.Die;
-
-        Debug.Log(state.IsDie);
     }
     
 }

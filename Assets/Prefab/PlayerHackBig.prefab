@@ -921,6 +921,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MoveSpeed: 5
   AttackRangeValue: 0
+  IsDie: 0
   _PlayerBehaviour: 0
   rigidbody2D: {fileID: 8420949427980107780}
   FixComputers: {fileID: 0}

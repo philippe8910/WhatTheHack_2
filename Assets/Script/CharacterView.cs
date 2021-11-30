@@ -14,15 +14,14 @@ public class CharacterView: MonoBehaviour
     
     void Start()
     {
-        fovprefab = GameObject.FindGameObjectWithTag("Fov");
-        fovScript = fovprefab.GetComponent<FieldOfView>();
+        //fovprefab = GameObject.FindGameObjectWithTag("Fov");
+        //fovScript = fovprefab.GetComponent<FieldOfView>();
     }
 
     // Update is called once per frame
     void Update()
     {
-       
-       fovScript.SetOrigin(transform.position);
+        fovScript.SetOrigin(transform.position);
     }
     
 

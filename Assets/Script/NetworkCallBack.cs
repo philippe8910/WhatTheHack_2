@@ -8,23 +8,26 @@ using UnityEngine;
 
 public class NetworkCallBack : GlobalEventListener
 {
-    [SerializeField] private GameObject Hack , Bouble;
+    [SerializeField] private GameObject Hack , Bouble , FOV;
     
     public override void SceneLoadLocalDone(string scene, IProtocolToken token)
     {
-
+        GameObject _Player;
+        
         if (BoltNetwork.IsServer)
         {
-            BoltNetwork.Instantiate(Hack , Vector3.zero,  Quaternion.identity);
+            _Player = BoltNetwork.Instantiate(Hack , Vector3.zero,  Quaternion.identity);
             Debug.Log("IsServer!!!!!!!!!!!!!!!!");
         }
         else
         {
-            BoltNetwork.Instantiate(Bouble , Vector3.zero,  Quaternion.identity);
+            _Player = BoltNetwork.Instantiate(Bouble , Vector3.zero,  Quaternion.identity);
             Debug.Log("IsNotServer!!!!!!!!!!!!!!!!");
         }
         
-        
-       
+        GameObject _FOV = Instantiate(FOV, Vector3.zero, Quaternion.identity);
+        _Player.GetComponent<CharacterView>().fovprefab = _FOV;
+        _Player.GetComponent<CharacterView>().fovScript = _FOV.GetComponent<FieldOfView>();
+
     }
 }

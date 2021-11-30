@@ -20,6 +20,8 @@ ShaderVariantCollection:
   - first: {fileID: 10770, guid: 0000000000000000f000000000000000, type: 0}
     second:
       variants:
+      - keywords: 
+        passType: 0
       - keywords: BILLBOARD_FACE_CAMERA_POS
         passType: 0
       - keywords: BILLBOARD_FACE_CAMERA_POS UNITY_HDR_ON
@@ -35,6 +37,11 @@ ShaderVariantCollection:
       - keywords: _SUNDISK_NONE
         passType: 0
       - keywords: _SUNDISK_SIMPLE
+        passType: 0
+  - first: {fileID: 207, guid: 0000000000000000f000000000000000, type: 0}
+    second:
+      variants:
+      - keywords: 
         passType: 0
   - first: {fileID: 9000, guid: 0000000000000000f000000000000000, type: 0}
     second:
@@ -78,6 +85,11 @@ ShaderVariantCollection:
         passType: 0
       - keywords: BILLBOARD_FACE_CAMERA_POS UNITY_HDR_ON
         passType: 0
+  - first: {fileID: 10623, guid: 0000000000000000f000000000000000, type: 0}
+    second:
+      variants:
+      - keywords: INSTANCING_ON SHADOWS_DEPTH
+        passType: 8
   - first: {fileID: 4800000, guid: c17132b1f77d20942aa75f8429c0f8bc, type: 3}
     second:
       variants:
@@ -196,6 +208,10 @@ ShaderVariantCollection:
       variants:
       - keywords: 
         passType: 0
+      - keywords: _ALPHATEST_ON
+        passType: 0
+      - keywords: _ALPHAPREMULTIPLY_ON
+        passType: 0
       - keywords: 
         passType: 11
       - keywords: 
@@ -264,6 +280,10 @@ ShaderVariantCollection:
       - keywords: _SOURCE_DEPTH
         passType: 0
       - keywords: _RECONSTRUCT_NORMAL_LOW _SOURCE_DEPTH
+        passType: 0
+      - keywords: _ORTHOGRAPHIC _SOURCE_DEPTH_NORMALS
+        passType: 0
+      - keywords: _ORTHOGRAPHIC _RECONSTRUCT_NORMAL_LOW _SOURCE_DEPTH_NORMALS
         passType: 0
   - first: {fileID: 4800000, guid: 29868e73b638e48ca99a19ea58c48d90, type: 3}
     second:

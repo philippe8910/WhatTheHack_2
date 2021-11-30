@@ -974,6 +974,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HUD: {fileID: 0}
   HintText: {fileID: 0}
+  PlayerNoramlUI: {fileID: 0}
+  PlayerFreezeUI: {fileID: 0}
+  PlayerDieUI: {fileID: 0}
   HintImage: {fileID: 0}
   ComputerRepairSprite: {fileID: 0}
   HelpAlleySprite: {fileID: 0}

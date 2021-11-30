@@ -29,7 +29,7 @@ public class PlayerNetwork : EntityBehaviour<ICustomPlayerState>
 
     [SerializeField] public GameObject PlayerSprite;
 
-    [SerializeField] public string RUN, IDLE, HARD;
+    [SerializeField] public string RUN, IDLE, HARD , FIX , DIE;
     
 
     // Start is called before the first frame update
@@ -101,21 +101,29 @@ public class PlayerNetwork : EntityBehaviour<ICustomPlayerState>
 
     public virtual void ControllAnimator()
     {
-        if (state.IsHard)
+        if (state.IsFix)
         {
-            state.Animator.Play(HARD);
+            state.Animator.Play(FIX);
         }
         else
         {
-            if (state.IsMove)
+            if (state.IsHard)
             {
-                state.Animator.Play(RUN);
+                state.Animator.Play(HARD);
             }
             else
             {
-                state.Animator.Play(IDLE);
+                if (state.IsMove)
+                {
+                    state.Animator.Play(RUN);
+                }
+                else
+                {
+                    state.Animator.Play(IDLE);
+                }
             }
         }
+        
     }
 
     public virtual void AnimatorControll()

@@ -25,7 +25,7 @@ public class Computers : EntityBehaviour<IComputer>
 
     private void RepairValueCallBack()
     {
-        state.RepairValue = FixValue;
+        FixValue = state.RepairValue;
     }
 
 

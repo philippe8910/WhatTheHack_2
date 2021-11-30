@@ -142,7 +142,7 @@ public class PlayerHackNetwork : EntityBehaviour<ICustomPlayerHackState>
 
             if (Physics2D.OverlapCircle(AttackRange.position , AttackRangeValue , PlayerMask))
             {
-                Physics2D.OverlapCircle(AttackRange.position , AttackRangeValue , PlayerMask).gameObject.GetComponent<PlayerNetwork>().PlayerOnAttack();
+                Physics2D.OverlapCircle(AttackRange.position , AttackRangeValue , PlayerMask).gameObject.GetComponent<PlayerNetwork>().PlayerOnAttackPRC();
             }
             
             

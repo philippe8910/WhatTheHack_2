@@ -231,6 +231,15 @@ public class PlayerNetwork : EntityBehaviour<ICustomPlayerState>
 
     public void PlayerOnAttack()
     {
+        state.IsDie = true;
+        _PlayerBehaviour = PlayerBehaviour.Die;
+
+        Debug.Log(state.IsDie);
+    }
+
+
+    public void PlayerOnAttackPRC()
+    {
         state.Die();
     }
 }

@@ -247,6 +247,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6259473588426499020, guid: dcb19658e4b67854e8992cb854d288a8, type: 3}
+      propertyPath: m_Radius
+      value: 0.7
+      objectReference: {fileID: 0}
     - target: {fileID: 6259473588426499023, guid: dcb19658e4b67854e8992cb854d288a8, type: 3}
       propertyPath: m_Name
       value: Computer
@@ -259,7 +263,8 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6259473588426499021, guid: dcb19658e4b67854e8992cb854d288a8, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: dcb19658e4b67854e8992cb854d288a8, type: 3}
 --- !u!1001 &978037798
 PrefabInstance:
@@ -340,6 +345,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6259473588426499020, guid: dcb19658e4b67854e8992cb854d288a8, type: 3}
+      propertyPath: m_Radius
+      value: 0.7
+      objectReference: {fileID: 0}
     - target: {fileID: 6259473588426499023, guid: dcb19658e4b67854e8992cb854d288a8, type: 3}
       propertyPath: m_Name
       value: Computer (1)
@@ -352,7 +361,8 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6259473588426499021, guid: dcb19658e4b67854e8992cb854d288a8, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: dcb19658e4b67854e8992cb854d288a8, type: 3}
 --- !u!1 &1149374525
 GameObject:

@@ -630,7 +630,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9099884150746178739}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: AttackRang
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1111,7 +1111,7 @@ GameObject:
   - component: {fileID: 8420949427981864415}
   - component: {fileID: 8420949427981864412}
   - component: {fileID: 8420949427981864413}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: P5_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1172,7 +1172,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 0
   m_Sprite: {fileID: -2605355326988883547, guid: 51443241b03c02b43a5aa7b0ad0b12d6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1260,7 +1260,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7109994647935500547, guid: c7ed71aa95550854fb1911ba8db60a16, type: 3}
       propertyPath: m_Layer
-      value: 10
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c7ed71aa95550854fb1911ba8db60a16, type: 3}

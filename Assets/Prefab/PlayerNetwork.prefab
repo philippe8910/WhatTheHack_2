@@ -17,7 +17,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &5764463481344719431
 RectTransform:
   m_ObjectHideFlags: 0
@@ -93,7 +93,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &601066489298102915
 RectTransform:
   m_ObjectHideFlags: 0
@@ -357,7 +357,7 @@ GameObject:
   - component: {fileID: 1862175297223454638}
   - component: {fileID: 1862175297223454637}
   - component: {fileID: 1862175297223454633}
-  m_Layer: 10
+  m_Layer: 5
   m_Name: PlayerHUD
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -467,9 +467,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HUD: {fileID: 0}
   HintText: {fileID: 0}
-  PlayerNoramlUI: {fileID: 0}
-  PlayerFreezeUI: {fileID: 0}
-  PlayerDieUI: {fileID: 0}
+  PlayerNoramlUI: {fileID: 521831538795432604}
+  PlayerFreezeUI: {fileID: 269806695702475816}
+  PlayerDieUI: {fileID: 4734185152600186939}
   HintImage: {fileID: 0}
   ComputerRepairSprite: {fileID: 0}
   HelpAlleySprite: {fileID: 0}
@@ -1418,7 +1418,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &7937805794728740949
 RectTransform:
   m_ObjectHideFlags: 0

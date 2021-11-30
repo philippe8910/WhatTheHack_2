@@ -73,7 +73,7 @@ public class PlayerHackNetwork : EntityBehaviour<ICustomPlayerHackState>
         if (other.gameObject.tag == "Player")
         {
             _PlayerBehaviour = PlayerBehaviour.IDLE;
-            state.IsHard = false;
+            state.IsAttack = false;
         }
 
         if (other.gameObject.tag == "Killer")
@@ -104,7 +104,7 @@ public class PlayerHackNetwork : EntityBehaviour<ICustomPlayerHackState>
 
     public virtual void ControllAnimator()
     {
-        if (state.IsHard)
+        if (state.IsAttack)
         {
             state.Animator.Play(HARD);
         }
@@ -128,11 +128,11 @@ public class PlayerHackNetwork : EntityBehaviour<ICustomPlayerHackState>
 
     public virtual void StateMachineControll()
     {
-        if (Input.GetMouseButtonDown(1))
+        if (Input.GetMouseButtonDown(1) && !state.IsAttack)
         {
             _PlayerBehaviour = PlayerBehaviour.Hard;
-
-            state.IsHard = true;
+            state.IsAttack = true;
+            Invoke("AttackStop" , 0.5f);
         }
         
 
@@ -202,5 +202,12 @@ public class PlayerHackNetwork : EntityBehaviour<ICustomPlayerHackState>
             // PlayerSprite.transform.localScale = 
             //    new Vector3(Mathf.Abs(PlayerSprite.transform.localScale.x) , PlayerSprite.transform.localScale.y , PlayerSprite.transform.localScale.z);
         }
+    }
+
+
+    public void AttackStop()
+    {
+        state.IsAttack = false;
+        _PlayerBehaviour = PlayerBehaviour.IDLE;
     }
 }

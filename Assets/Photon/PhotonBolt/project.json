@@ -250,6 +250,23 @@
             "ExtrapolationMaxFrames": 9,
             "SnapMagnitude": 10.0
           }
+        },
+        {
+          "Name": "IsFix",
+          "Enabled": true,
+          "Expanded": true,
+          "ReplicationMode": 1,
+          "Priority": 1,
+          "PropertyType": {
+            "$type": "Photon.Bolt.Compiler.PropertyTypeBool, bolt.compiler"
+          },
+          "AssetSettings": {
+            "$type": "Photon.Bolt.Compiler.PropertyStateSettings, bolt.compiler",
+            "ExtrapolationErrorTolerance": 0.25,
+            "_ExtrapolationCorrectionFrames": 6,
+            "ExtrapolationMaxFrames": 9,
+            "SnapMagnitude": 10.0
+          }
         }
       ],
       "PacketMaxBits": 512,
@@ -576,7 +593,7 @@
           }
         },
         {
-          "Name": "IsHard",
+          "Name": "IsAttack",
           "Enabled": true,
           "Expanded": true,
           "ReplicationMode": 1,

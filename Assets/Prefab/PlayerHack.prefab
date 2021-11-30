@@ -515,7 +515,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &6983261905267478094
 RectTransform:
   m_ObjectHideFlags: 0
@@ -803,11 +803,11 @@ GameObject:
   - component: {fileID: 5987650777540513320}
   m_Layer: 0
   m_Name: Camera
-  m_TagString: MainCamera
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &8420949425995927005
 Transform:
   m_ObjectHideFlags: 0
@@ -848,7 +848,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 60
+  field of view: 70
   orthographic: 0
   orthographic size: 5
   m_Depth: 0
@@ -1239,6 +1239,18 @@ PrefabInstance:
     - target: {fileID: 3789967401003252935, guid: 63c0602e9236267459b487427780f942, type: 3}
       propertyPath: m_RootOrder
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3789967401003252935, guid: 63c0602e9236267459b487427780f942, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 390.62875
+      objectReference: {fileID: 0}
+    - target: {fileID: 3789967401003252935, guid: 63c0602e9236267459b487427780f942, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 390.62875
+      objectReference: {fileID: 0}
+    - target: {fileID: 3789967401003252935, guid: 63c0602e9236267459b487427780f942, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 390.62875
       objectReference: {fileID: 0}
     - target: {fileID: 3789967401003252935, guid: 63c0602e9236267459b487427780f942, type: 3}
       propertyPath: m_LocalPosition.x

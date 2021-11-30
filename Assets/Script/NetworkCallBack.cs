@@ -8,7 +8,7 @@ using UnityEngine;
 
 public class NetworkCallBack : GlobalEventListener
 {
-    [SerializeField] private GameObject Hack , Bouble , FOV , Camera;
+    [SerializeField] private GameObject Hack, Bouble, FOV;
     
     public override void SceneLoadLocalDone(string scene, IProtocolToken token)
     {

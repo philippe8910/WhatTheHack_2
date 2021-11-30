@@ -9,11 +9,17 @@ public class PlayerNetwork : EntityBehaviour<ICustomPlayerState>
 {
     [Header("Value")] 
     
+    [SerializeField] public float OrginalSpeed; 
+    
     [SerializeField] public float MoveSpeed;
     
     [SerializeField] public float Dashtime;
+    
+    [SerializeField] public float Dashpower;
 
     [SerializeField] public bool IsDie;
+
+    [SerializeField] public bool IsDashing;
     
     [Header("Basic")]
     
@@ -39,6 +45,7 @@ public class PlayerNetwork : EntityBehaviour<ICustomPlayerState>
     // Start is called before the first frame update
     public override void Attached()
     {
+        MoveSpeed = OrginalSpeed;
         state.SetTransforms(state.PlayerTransform , transform);
         state.SetTransforms(state.PlayerAnimatorTransform , PlayerSprite.transform);
         state.SetAnimator(_animator);
@@ -162,11 +169,13 @@ public class PlayerNetwork : EntityBehaviour<ICustomPlayerState>
 
     public IEnumerator PlayerDash()
     {
-      
+            IsDashing = true;
             _PlayerBehaviour = PlayerBehaviour.Dash;
+            MoveSpeed *= Dashpower;
             yield return new WaitForSeconds(Dashtime);
-            _PlayerBehaviour = PlayerBehaviour.IDLE;
-        
+            MoveSpeed = OrginalSpeed;
+            IsDashing = false;
+
     }
     public virtual void StateMachineControll()
     {

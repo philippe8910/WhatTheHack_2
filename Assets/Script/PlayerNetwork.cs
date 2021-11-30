@@ -69,8 +69,12 @@ public class PlayerNetwork : EntityBehaviour<ICustomPlayerState>
     {
         if (other.gameObject.tag == "Player")
         {
-            _PlayerBehaviour = PlayerBehaviour.IDLE;
-            state.IsHard = false;
+
+            if (_PlayerBehaviour != PlayerBehaviour.Die)
+            {
+                _PlayerBehaviour = PlayerBehaviour.IDLE;
+                state.IsHard = false;
+            }
         }
 
         if (other.gameObject.tag == "Killer")
@@ -153,10 +157,14 @@ public class PlayerNetwork : EntityBehaviour<ICustomPlayerState>
         if (FixComputers != null && Input.GetMouseButtonDown(0))
         {
             _PlayerBehaviour = PlayerBehaviour.Repiaring;
+
+            state.IsFix = true;
         }
         if (FixComputers != null && Input.GetMouseButtonUp(0))
         {
             _PlayerBehaviour = PlayerBehaviour.IDLE;
+            
+            state.IsFix = false;
         }
         
 

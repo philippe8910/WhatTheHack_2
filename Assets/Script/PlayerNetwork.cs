@@ -10,6 +10,8 @@ public class PlayerNetwork : EntityBehaviour<ICustomPlayerState>
     [Header("Value")] 
     
     [SerializeField] public float MoveSpeed;
+    
+    [SerializeField] public float Dashtime;
 
     [SerializeField] public bool IsDie;
     
@@ -163,15 +165,19 @@ public class PlayerNetwork : EntityBehaviour<ICustomPlayerState>
 
     public IEnumerator PlayerDash()
     {
-        if (Input.GetMouseButtonDown(2))
-        {
+      
             _PlayerBehaviour = PlayerBehaviour.Dash;
-        }
-
-        yield return null;
+            yield return new WaitForSeconds(Dashtime);
+            _PlayerBehaviour = PlayerBehaviour.IDLE;
+        
     }
     public virtual void StateMachineControll()
     {
+        if (Input.GetMouseButtonDown(2))
+        {
+            StartCoroutine(PlayerDash());
+        }
+
         if (Input.GetMouseButtonDown(1))
         {
             _PlayerBehaviour = PlayerBehaviour.Hard;

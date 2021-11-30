@@ -220,6 +220,8 @@ public class PlayerNetwork : EntityBehaviour<ICustomPlayerState>
 
     public void PlayerOnAttack()
     {
+        Debug.Log("Attack");
+        
         _PlayerBehaviour = PlayerBehaviour.Die;
         state.IsDie = true;
     }

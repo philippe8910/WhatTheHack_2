@@ -642,7 +642,7 @@ GameObject:
   - component: {fileID: 1862175297837322733}
   - component: {fileID: 1862175297837322732}
   m_Layer: 10
-  m_Name: Skill_Hard
+  m_Name: Skill_Help
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -696,7 +696,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: ded7c3eb79d57834396a6e0f319eb60e, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e1d416b9f90a2344f9434be2207b9d81, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -820,7 +820,7 @@ GameObject:
   - component: {fileID: 1862175297845874306}
   - component: {fileID: 1862175297845874305}
   m_Layer: 10
-  m_Name: Skill_Help
+  m_Name: Skill_Dash
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -874,7 +874,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: e1d416b9f90a2344f9434be2207b9d81, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 5769f60f7a95e7d40a09a15a0ead14ef, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1050,7 +1050,7 @@ GameObject:
   - component: {fileID: 1862175298520897926}
   - component: {fileID: 1862175298520897925}
   m_Layer: 10
-  m_Name: Skill_Dash
+  m_Name: Skill_Hard
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1104,7 +1104,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 5769f60f7a95e7d40a09a15a0ead14ef, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ded7c3eb79d57834396a6e0f319eb60e, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

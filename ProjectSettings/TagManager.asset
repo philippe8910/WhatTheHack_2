@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Killer
   - Computer
+  - Fov
   layers:
   - Default
   - TransparentFX
@@ -15,11 +16,11 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - NotVisible
+  - Mask
+  - BehindMask
+  - Black
+  - Objects
   - 
   - 
   - 
@@ -40,6 +41,15 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Background
+    uniqueID: 2672049509
+    locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Foreground
+    uniqueID: 654936935
+    locked: 0
+  - name: UI
+    uniqueID: 1746433555
     locked: 0

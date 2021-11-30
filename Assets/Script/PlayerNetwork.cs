@@ -40,8 +40,7 @@ public class PlayerNetwork : EntityBehaviour<ICustomPlayerState>
         state.SetTransforms(state.PlayerTransform , transform);
         state.SetTransforms(state.PlayerAnimatorTransform , PlayerSprite.transform);
         state.SetAnimator(_animator);
-        state.AddCallback("IsDie" , IsDieCallBack);
-        
+
         rigidbody2D = GetComponent<Rigidbody2D>();
         
         
@@ -61,7 +60,6 @@ public class PlayerNetwork : EntityBehaviour<ICustomPlayerState>
     public void IsDieCallBack()
     {
         IsDie = state.IsDie;
-        Debug.Log(state.IsDie);
     }
 
     private void Update()
@@ -73,6 +71,11 @@ public class PlayerNetwork : EntityBehaviour<ICustomPlayerState>
         {
             MyCamera.gameObject.SetActive(true);
             PlayerHud.gameObject.SetActive(true);
+        }
+
+        if (Input.GetKeyDown(KeyCode.O))
+        {
+            PlayerOnAttack();
         }
     }
 
@@ -164,6 +167,8 @@ public class PlayerNetwork : EntityBehaviour<ICustomPlayerState>
         {
             _PlayerBehaviour = PlayerBehaviour.Dash;
         }
+
+        yield return null;
     }
     public virtual void StateMachineControll()
     {

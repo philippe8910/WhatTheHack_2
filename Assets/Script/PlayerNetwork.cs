@@ -10,6 +10,8 @@ public class PlayerNetwork : EntityBehaviour<ICustomPlayerState>
     [Header("Value")] 
     
     [SerializeField] public float MoveSpeed;
+
+    [SerializeField] public bool IsDie;
     
     [Header("Basic")]
     
@@ -38,8 +40,8 @@ public class PlayerNetwork : EntityBehaviour<ICustomPlayerState>
         state.SetTransforms(state.PlayerTransform , transform);
         state.SetTransforms(state.PlayerAnimatorTransform , PlayerSprite.transform);
         state.SetAnimator(_animator);
-        state.OnDie = PlayerOnAttack;
-
+        state.AddCallback("IsDie" , IsDieCallBack);
+        
         rigidbody2D = GetComponent<Rigidbody2D>();
         
         
@@ -54,6 +56,11 @@ public class PlayerNetwork : EntityBehaviour<ICustomPlayerState>
         PlayerPhysicControll();
         StateMachineControll();
         FlipSpriteControll();
+    }
+
+    public void IsDieCallBack()
+    {
+        IsDie = state.IsDie;
     }
 
     private void Update()
@@ -80,10 +87,7 @@ public class PlayerNetwork : EntityBehaviour<ICustomPlayerState>
             }
         }
 
-        if (other.gameObject.tag == "Killer")
-        {
-            Destroy(gameObject);
-        }
+        
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -95,6 +99,11 @@ public class PlayerNetwork : EntityBehaviour<ICustomPlayerState>
                 FixComputers = other.GetComponent<Computers>();
                 
             }
+        }
+        
+        if (other.gameObject.tag == "Killer")
+        {
+            PlayerOnAttack();
         }
     }
 
@@ -236,10 +245,5 @@ public class PlayerNetwork : EntityBehaviour<ICustomPlayerState>
 
         Debug.Log(state.IsDie);
     }
-
-
-    public void PlayerOnAttackPRC()
-    {
-        state.Die();
-    }
+    
 }

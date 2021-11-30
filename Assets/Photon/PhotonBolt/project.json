@@ -789,6 +789,27 @@
       "Name": "CustomPlayerHackState",
       "Guid": "dee12d56-56b6-4973-90ad-be7874eda817",
       "Groups": []
+    },
+    {
+      "$type": "Photon.Bolt.Compiler.EventDefinition, bolt.compiler",
+      "Properties": [
+        {
+          "Name": "IsDie",
+          "Enabled": true,
+          "Expanded": true,
+          "ReplicationMode": 1,
+          "Priority": 1,
+          "PropertyType": {
+            "$type": "Photon.Bolt.Compiler.PropertyTypeBool, bolt.compiler"
+          },
+          "AssetSettings": {
+            "$type": "Photon.Bolt.Compiler.PropertyEventSettings, bolt.compiler"
+          }
+        }
+      ],
+      "Name": "PlayerOnAttackEvent",
+      "Guid": "15a1cf23-f454-47a6-8879-a30d7b16e95d",
+      "Groups": []
     }
   ],
   "ActiveGroup": "Everything"

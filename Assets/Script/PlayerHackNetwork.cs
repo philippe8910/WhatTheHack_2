@@ -13,6 +13,8 @@ public class PlayerHackNetwork : EntityBehaviour<ICustomPlayerHackState>
     [SerializeField] public float MoveSpeed;
 
     [SerializeField] public float AttackRangeValue;
+
+    [SerializeField] public bool IsDie;
     
     [Header("Basic")]
     
@@ -29,6 +31,8 @@ public class PlayerHackNetwork : EntityBehaviour<ICustomPlayerHackState>
     [SerializeField] public Camera MyCamera;
 
     [SerializeField] public LayerMask PlayerMask;
+
+   // [SerializeField] public GameObject AttackZone;
 
     [Header("Animation")] 
     
@@ -62,6 +66,7 @@ public class PlayerHackNetwork : EntityBehaviour<ICustomPlayerHackState>
         StateMachineControll();
         FlipSpriteControll();
     }
+    
 
     private void Update()
     {
@@ -85,7 +90,7 @@ public class PlayerHackNetwork : EntityBehaviour<ICustomPlayerHackState>
 
         if (other.gameObject.tag == "Killer")
         {
-            Destroy(gameObject);
+            
         }
     }
 
@@ -139,13 +144,16 @@ public class PlayerHackNetwork : EntityBehaviour<ICustomPlayerHackState>
         {
             _PlayerBehaviour = PlayerBehaviour.Hard;
             state.IsAttack = true;
-
+            
+            
             if (Physics2D.OverlapCircle(AttackRange.position , AttackRangeValue , PlayerMask))
             {
-                Physics2D.OverlapCircle(AttackRange.position , AttackRangeValue , PlayerMask).gameObject.GetComponent<PlayerNetwork>().PlayerOnAttackPRC();
+                Physics2D.OverlapCircle(AttackRange.position , AttackRangeValue , PlayerMask).gameObject.GetComponent<PlayerNetwork>().PlayerOnAttack();
             }
             
             
+            //BoltNetwork.Instantiate(AttackZone, AttackRange.position, Quaternion.identity);
+
             Invoke("AttackStop" , 0.5f);
         }
         

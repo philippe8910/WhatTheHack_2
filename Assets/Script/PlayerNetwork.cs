@@ -174,6 +174,7 @@ public class PlayerNetwork : EntityBehaviour<ICustomPlayerState>
     {
             IsDashing = true;
             _PlayerBehaviour = PlayerBehaviour.Dash;
+            
             MoveSpeed *= Dashpower;
             yield return new WaitForSeconds(Dashtime);
             MoveSpeed = OrginalSpeed;

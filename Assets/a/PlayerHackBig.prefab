@@ -1115,9 +1115,25 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8420949427980107783}
     m_Modifications:
+    - target: {fileID: 3335355001648556488, guid: 6fd437c287e777f40afea9765eb5ec5c, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 212
+      objectReference: {fileID: 0}
+    - target: {fileID: 3335355001648556488, guid: 6fd437c287e777f40afea9765eb5ec5c, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 212
+      objectReference: {fileID: 0}
+    - target: {fileID: 3335355001648556488, guid: 6fd437c287e777f40afea9765eb5ec5c, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 212
+      objectReference: {fileID: 0}
     - target: {fileID: 4894734193748568984, guid: 6fd437c287e777f40afea9765eb5ec5c, type: 3}
       propertyPath: m_Name
       value: Camera
+      objectReference: {fileID: 0}
+    - target: {fileID: 4894734193748568984, guid: 6fd437c287e777f40afea9765eb5ec5c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4894734193748568987, guid: 6fd437c287e777f40afea9765eb5ec5c, type: 3}
       propertyPath: m_RootOrder

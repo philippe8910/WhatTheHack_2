@@ -8,6 +8,12 @@ public class PlayerHUD : MonoBehaviour
     [SerializeField] private GameObject HUD;
 
     [SerializeField] private Text HintText;
+    
+    [SerializeField] private GameObject PlayerNoramlUI;
+    
+    [SerializeField] private GameObject PlayerFreezeUI;
+    
+    [SerializeField] private GameObject PlayerDieUI;
 
     [SerializeField] private Image HintImage;
 
@@ -18,6 +24,9 @@ public class PlayerHUD : MonoBehaviour
     {
         HintImage = transform.GetComponentInChildren<Image>();
         HintText = transform.GetComponentInChildren<Text>();
+        PlayerDieUI = transform.GetComponentInChildren<GameObject>();
+        PlayerFreezeUI = transform.GetComponentInChildren<GameObject>();
+        PlayerNoramlUI = transform.GetComponentInChildren<GameObject>();
     }
 
     public void ShowRepairComputerHint()
@@ -27,6 +36,26 @@ public class PlayerHUD : MonoBehaviour
         SetHintText("Repair Computer");
     }
 
+    public void PlayerNormal()
+    {
+        PlayerNoramlUI.SetActive(true);
+        PlayerFreezeUI.SetActive(false);
+        PlayerDieUI.SetActive(false);
+    }
+    
+    public void PlayerFreeze()
+    {
+        PlayerNoramlUI.SetActive(false);
+        PlayerFreezeUI.SetActive(true);
+        PlayerDieUI.SetActive(false);
+    }
+
+    public void PlayerDie()
+    {
+        PlayerNoramlUI.SetActive(false);
+        PlayerFreezeUI.SetActive(false);
+        PlayerDieUI.SetActive(true);
+    }
     public void ShowHelpAlleyHint()
     {
         ShowHint();

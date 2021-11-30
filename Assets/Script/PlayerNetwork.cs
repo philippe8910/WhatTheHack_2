@@ -109,12 +109,14 @@ public class PlayerNetwork : EntityBehaviour<ICustomPlayerState>
         {
             if (state.IsHard)
             {
+                PlayerHud.PlayerFreeze();
                 state.Animator.Play(HARD);
             }
             else
             {
                 if (state.IsMove)
                 {
+                    PlayerHud.PlayerNormal();
                     state.Animator.Play(RUN);
                 }
                 else

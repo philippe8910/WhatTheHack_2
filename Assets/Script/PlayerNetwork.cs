@@ -39,7 +39,7 @@ public class PlayerNetwork : EntityBehaviour<ICustomPlayerState>
 
     [SerializeField] public GameObject PlayerSprite;
 
-    [SerializeField] public string RUN, IDLE, HARD , FIX , DIE;
+    [SerializeField] public string RUN, IDLE, HARD , FIX , DIE,DASH;
     
 
     // Start is called before the first frame update
@@ -152,7 +152,15 @@ public class PlayerNetwork : EntityBehaviour<ICustomPlayerState>
                     }
                     else
                     {
-                        state.Animator.Play(IDLE);
+                        if (state.IsDash)
+                        {
+                            state.Animator.Play(DASH);
+                        }
+                        else
+                        {
+                            state.Animator.Play(IDLE);
+                        }
+                        
                     }
                 }
             }
@@ -174,18 +182,23 @@ public class PlayerNetwork : EntityBehaviour<ICustomPlayerState>
     {
             IsDashing = true;
             _PlayerBehaviour = PlayerBehaviour.Dash;
-            
+            state.IsDash = true;
             MoveSpeed *= Dashpower;
             yield return new WaitForSeconds(Dashtime);
             MoveSpeed = OrginalSpeed;
+            state.IsDash = false;
             IsDashing = false;
+            
 
     }
     public virtual void StateMachineControll()
     {
         if (Input.GetMouseButtonDown(2))
         {
-            StartCoroutine(PlayerDash());
+            if (!IsDashing)
+            {
+                StartCoroutine(PlayerDash());
+            }
         }
 
         if (Input.GetMouseButtonDown(1))

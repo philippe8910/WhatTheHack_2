@@ -63,7 +63,7 @@ public class PlayerHackNetwork : EntityBehaviour<ICustomPlayerHackState>
         
         if (entity.IsOwner && !MyCamera.gameObject.activeInHierarchy)
         {
-            MyCamera.gameObject.SetActive(true);
+            //MyCamera.gameObject.SetActive(true);
             PlayerHud.gameObject.SetActive(true);
         }
     }

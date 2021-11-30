@@ -563,6 +563,7 @@ MonoBehaviour:
   HARD: PlayerHARD
   FIX: 
   DIE: 
+  DASH: PlayerDASH
 --- !u!1 &4888102931808818324
 GameObject:
   m_ObjectHideFlags: 0

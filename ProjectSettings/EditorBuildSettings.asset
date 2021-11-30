@@ -14,7 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/WaitLobby.unity
     guid: c4c8a62ef2dbf3345aea624f3a186e25
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/WaitLobby_0.unity
     guid: a52918d8783404484af7a25e5a9f4815
   m_configObjects: {}

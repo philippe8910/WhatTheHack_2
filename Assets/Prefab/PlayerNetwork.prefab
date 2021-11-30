@@ -618,6 +618,7 @@ MonoBehaviour:
   HARD: PlayerHARD
   FIX: PlayerFIX
   DIE: PlayerDIE
+  DASH: PlayerD
 --- !u!114 &1031731569462997248
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -953,7 +953,7 @@ GameObject:
   - component: {fileID: 7653848584573197793}
   - component: {fileID: 4868932352701747053}
   - component: {fileID: 3478893934016161668}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: PlayerHack
   m_TagString: Player
   m_Icon: {fileID: 0}

@@ -18,6 +18,7 @@ public class FieldOfView : MonoBehaviour
     {
         mesh = new Mesh();
         GetComponent<MeshFilter>().mesh = mesh;
+        mesh.RecalculateBounds();
         origen = Vector3.zero;
     }
 

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5764463481344719431}
   - component: {fileID: 6436792677710533792}
   - component: {fileID: 245734433037862210}
-  m_Layer: 10
+  m_Layer: 5
   m_Name: Bubble_Freeze
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27,7 +27,7 @@ RectTransform:
   m_GameObject: {fileID: 269806695702475816}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.6094673, y: 0.4839888, z: 0.4780136}
+  m_LocalScale: {x: 0.94107854, y: 0.7473271, z: 0.7381008}
   m_Children:
   - {fileID: 2282881763062701500}
   m_Father: {fileID: 1862175297223454632}
@@ -35,7 +35,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 355.8, y: 182}
+  m_AnchoredPosition: {x: 343.00006, y: 171.00002}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6436792677710533792
@@ -87,7 +87,7 @@ GameObject:
   - component: {fileID: 601066489298102915}
   - component: {fileID: 9010751661011042418}
   - component: {fileID: 4206681611064332894}
-  m_Layer: 10
+  m_Layer: 5
   m_Name: Bubble_Normal
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -103,7 +103,7 @@ RectTransform:
   m_GameObject: {fileID: 521831538795432604}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.6094673, y: 0.4839888, z: 0.4780136}
+  m_LocalScale: {x: 0.94107854, y: 0.7473271, z: 0.7381008}
   m_Children:
   - {fileID: 2111070623090511070}
   m_Father: {fileID: 1862175297223454632}
@@ -111,7 +111,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 355.8, y: 182}
+  m_AnchoredPosition: {x: 343, y: 171}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &9010751661011042418
@@ -164,7 +164,7 @@ GameObject:
   - component: {fileID: 5505841471086519875}
   - component: {fileID: 7979979149654552499}
   - component: {fileID: 5450050260438551327}
-  m_Layer: 10
+  m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -261,7 +261,7 @@ GameObject:
   - component: {fileID: 1862175297018067088}
   - component: {fileID: 1862175297018067095}
   - component: {fileID: 1862175297018067094}
-  m_Layer: 10
+  m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -641,7 +641,7 @@ GameObject:
   - component: {fileID: 1862175297837322771}
   - component: {fileID: 1862175297837322733}
   - component: {fileID: 1862175297837322732}
-  m_Layer: 10
+  m_Layer: 5
   m_Name: Skill_Help
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -657,7 +657,7 @@ RectTransform:
   m_GameObject: {fileID: 1862175297837322770}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.46409088, y: 0.46409088, z: 0.46409088}
+  m_LocalScale: {x: 0.71660274, y: 0.71660274, z: 0.71660274}
   m_Children:
   - {fileID: 1862175298744696028}
   m_Father: {fileID: 1862175297223454632}
@@ -665,7 +665,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 175, y: -175.5}
+  m_AnchoredPosition: {x: 143, y: -148.99998}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1862175297837322733
@@ -819,7 +819,7 @@ GameObject:
   - component: {fileID: 1862175297845874304}
   - component: {fileID: 1862175297845874306}
   - component: {fileID: 1862175297845874305}
-  m_Layer: 10
+  m_Layer: 5
   m_Name: Skill_Dash
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -835,7 +835,7 @@ RectTransform:
   m_GameObject: {fileID: 1862175297845874311}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.46409088, y: 0.46409088, z: 0.46409088}
+  m_LocalScale: {x: 0.71660274, y: 0.71660274, z: 0.71660274}
   m_Children:
   - {fileID: 1862175298588675357}
   m_Father: {fileID: 1862175297223454632}
@@ -843,7 +843,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 343, y: -175.5}
+  m_AnchoredPosition: {x: 341, y: -148.99998}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1862175297845874306
@@ -895,7 +895,7 @@ GameObject:
   - component: {fileID: 1862175298146413349}
   - component: {fileID: 1862175298146413351}
   - component: {fileID: 1862175298146413350}
-  m_Layer: 10
+  m_Layer: 5
   m_Name: Map
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -970,7 +970,7 @@ GameObject:
   - component: {fileID: 1862175298423445667}
   - component: {fileID: 1862175298423445693}
   - component: {fileID: 1862175298423445692}
-  m_Layer: 10
+  m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1049,7 +1049,7 @@ GameObject:
   - component: {fileID: 1862175298520897924}
   - component: {fileID: 1862175298520897926}
   - component: {fileID: 1862175298520897925}
-  m_Layer: 10
+  m_Layer: 5
   m_Name: Skill_Hard
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1065,7 +1065,7 @@ RectTransform:
   m_GameObject: {fileID: 1862175298520897931}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.46409088, y: 0.46409088, z: 0.46409088}
+  m_LocalScale: {x: 0.71660274, y: 0.71660274, z: 0.71660274}
   m_Children:
   - {fileID: 1862175297018067093}
   m_Father: {fileID: 1862175297223454632}
@@ -1073,7 +1073,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 259, y: -175.5}
+  m_AnchoredPosition: {x: 241, y: -149}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1862175298520897926
@@ -1126,7 +1126,7 @@ GameObject:
   - component: {fileID: 1862175298588675352}
   - component: {fileID: 1862175298588675359}
   - component: {fileID: 1862175298588675358}
-  m_Layer: 10
+  m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1221,7 +1221,7 @@ GameObject:
   - component: {fileID: 1862175298744696031}
   - component: {fileID: 1862175298744696030}
   - component: {fileID: 1862175298744696029}
-  m_Layer: 10
+  m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1316,7 +1316,7 @@ GameObject:
   - component: {fileID: 1650952990345979829}
   - component: {fileID: 2305214294501154674}
   - component: {fileID: 3365995923021659225}
-  m_Layer: 10
+  m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1412,7 +1412,7 @@ GameObject:
   - component: {fileID: 7937805794728740949}
   - component: {fileID: 4220332353126758139}
   - component: {fileID: 2177237728587883294}
-  m_Layer: 10
+  m_Layer: 5
   m_Name: Bubble_Die
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1428,7 +1428,7 @@ RectTransform:
   m_GameObject: {fileID: 4734185152600186939}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.6094673, y: 0.4839888, z: 0.4780136}
+  m_LocalScale: {x: 0.94107854, y: 0.7473271, z: 0.7381008}
   m_Children:
   - {fileID: 3493087066188362479}
   m_Father: {fileID: 1862175297223454632}
@@ -1436,7 +1436,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 355.8, y: 182}
+  m_AnchoredPosition: {x: 343.00006, y: 171.00002}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4220332353126758139
@@ -1489,7 +1489,7 @@ GameObject:
   - component: {fileID: 4360436524077079055}
   - component: {fileID: 8062743115293901400}
   - component: {fileID: 106533094733863371}
-  m_Layer: 10
+  m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1585,7 +1585,7 @@ GameObject:
   - component: {fileID: 5447966730621953811}
   - component: {fileID: 2539104427789348441}
   - component: {fileID: 1023879269757053357}
-  m_Layer: 10
+  m_Layer: 5
   m_Name: "\u7BAD\u982D_2"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1685,15 +1685,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3335355001648556488, guid: 6fd437c287e777f40afea9765eb5ec5c, type: 3}
       propertyPath: m_LocalScale.x
-      value: 212
+      value: 1070.284
       objectReference: {fileID: 0}
     - target: {fileID: 3335355001648556488, guid: 6fd437c287e777f40afea9765eb5ec5c, type: 3}
       propertyPath: m_LocalScale.y
-      value: 212
+      value: 1070.284
       objectReference: {fileID: 0}
     - target: {fileID: 3335355001648556488, guid: 6fd437c287e777f40afea9765eb5ec5c, type: 3}
       propertyPath: m_LocalScale.z
-      value: 212
+      value: 1070.284
       objectReference: {fileID: 0}
     - target: {fileID: 3335355001648556491, guid: 6fd437c287e777f40afea9765eb5ec5c, type: 3}
       propertyPath: m_Layer

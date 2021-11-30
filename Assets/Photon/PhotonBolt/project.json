@@ -266,7 +266,6 @@
           "Name": "IsDie",
           "Enabled": true,
           "Expanded": true,
-          "ReplicationMode": 1,
           "Priority": 1,
           "PropertyType": {
             "$type": "Photon.Bolt.Compiler.PropertyTypeBool, bolt.compiler"

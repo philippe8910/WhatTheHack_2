@@ -515,7 +515,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &6983261905267478094
 RectTransform:
   m_ObjectHideFlags: 0
@@ -613,11 +613,41 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed1734a43d0d9b747980f5e4f6c7538a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HUD: {fileID: 0}
+  HUD: {fileID: 6528648119976231227}
   HintText: {fileID: 0}
   HintImage: {fileID: 0}
   ComputerRepairSprite: {fileID: 0}
   HelpAlleySprite: {fileID: 0}
+--- !u!1 &7107650054995112387
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 9099884150746178739}
+  m_Layer: 0
+  m_Name: AttackRang
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &9099884150746178739
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7107650054995112387}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.923, y: -0.48, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 8420949427980107783}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7822245814806163649
 GameObject:
   m_ObjectHideFlags: 0
@@ -942,6 +972,7 @@ Transform:
   - {fileID: 8420949427981864415}
   - {fileID: 6983261905267478094}
   - {fileID: 4835012152724215354}
+  - {fileID: 9099884150746178739}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1034,11 +1065,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MoveSpeed: 5
+  AttackRangeValue: 0.38
   _PlayerBehaviour: 0
   rigidbody2D: {fileID: 8420949427980107780}
   FixComputers: {fileID: 0}
   PlayerHud: {fileID: 823732923040602473}
+  AttackRange: {fileID: 9099884150746178739}
   MyCamera: {fileID: 8420949425995927004}
+  PlayerMask:
+    serializedVersion: 2
+    m_Bits: 0
   _animator: {fileID: 8420949427981864413}
   PlayerSprite: {fileID: 8420949427981864414}
   RUN: HackRUN

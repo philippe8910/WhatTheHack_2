@@ -889,7 +889,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _sceneGuid: 
   _serializerGuid: dee12d56-56b6-4973-90ad-be7874eda817
-  _prefabId: 1
+  _prefabId: 2
   _updateRate: 1
   _autoFreezeProxyFrames: 0
   _clientPredicted: 1
@@ -917,11 +917,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MoveSpeed: 5
+  AttackRangeValue: 0
   _PlayerBehaviour: 0
   rigidbody2D: {fileID: 8420949427980107780}
   FixComputers: {fileID: 0}
   PlayerHud: {fileID: 823732923040602473}
+  AttackRange: {fileID: 0}
   MyCamera: {fileID: 8420949425995927004}
+  PlayerMask:
+    serializedVersion: 2
+    m_Bits: 0
   _animator: {fileID: 8420949427981864413}
   PlayerSprite: {fileID: 8420949427981864414}
   RUN: HackRUN
@@ -1165,13 +1170,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6fd437c287e777f40afea9765eb5ec5c, type: 3}
---- !u!4 &8420949425995927005 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4894734193748568987, guid: 6fd437c287e777f40afea9765eb5ec5c, type: 3}
-  m_PrefabInstance: {fileID: 3976870008529823302}
-  m_PrefabAsset: {fileID: 0}
 --- !u!20 &8420949425995927004 stripped
 Camera:
   m_CorrespondingSourceObject: {fileID: 4894734193748568986, guid: 6fd437c287e777f40afea9765eb5ec5c, type: 3}
+  m_PrefabInstance: {fileID: 3976870008529823302}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &8420949425995927005 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4894734193748568987, guid: 6fd437c287e777f40afea9765eb5ec5c, type: 3}
   m_PrefabInstance: {fileID: 3976870008529823302}
   m_PrefabAsset: {fileID: 0}

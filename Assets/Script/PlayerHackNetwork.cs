@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Security.Cryptography;
 using Photon.Bolt;
 using UnityEditor;
 using UnityEngine;
@@ -10,6 +11,8 @@ public class PlayerHackNetwork : EntityBehaviour<ICustomPlayerHackState>
     [Header("Value")] 
     
     [SerializeField] public float MoveSpeed;
+
+    [SerializeField] public float AttackRangeValue;
     
     [Header("Basic")]
     
@@ -21,7 +24,11 @@ public class PlayerHackNetwork : EntityBehaviour<ICustomPlayerHackState>
     
     [SerializeField] public PlayerHUD PlayerHud;
 
+    [SerializeField] public Transform AttackRange;
+
     [SerializeField] public Camera MyCamera;
+
+    [SerializeField] public LayerMask PlayerMask;
 
     [Header("Animation")] 
     
@@ -132,6 +139,13 @@ public class PlayerHackNetwork : EntityBehaviour<ICustomPlayerHackState>
         {
             _PlayerBehaviour = PlayerBehaviour.Hard;
             state.IsAttack = true;
+
+            if (Physics2D.OverlapCircle(AttackRange.position , AttackRangeValue , PlayerMask))
+            {
+                Destroy(Physics2D.OverlapCircle(AttackRange.position , AttackRangeValue , PlayerMask).transform.gameObject);
+            }
+            
+            
             Invoke("AttackStop" , 0.5f);
         }
         
@@ -202,6 +216,13 @@ public class PlayerHackNetwork : EntityBehaviour<ICustomPlayerHackState>
             // PlayerSprite.transform.localScale = 
             //    new Vector3(Mathf.Abs(PlayerSprite.transform.localScale.x) , PlayerSprite.transform.localScale.y , PlayerSprite.transform.localScale.z);
         }
+    }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(AttackRange.position , AttackRangeValue);
+        
     }
 
 

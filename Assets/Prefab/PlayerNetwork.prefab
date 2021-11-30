@@ -318,7 +318,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _sceneGuid: 
   _serializerGuid: a6d30241-38f7-4efe-8078-59712b49d3a3
-  _prefabId: 2
+  _prefabId: 3
   _updateRate: 1
   _autoFreezeProxyFrames: 0
   _clientPredicted: 1
@@ -356,8 +356,8 @@ MonoBehaviour:
   RUN: PlayerRUN
   IDLE: PlayerIDLE
   HARD: PlayerHARD
-  FIX: 
-  DIE: 
+  FIX: PlayerFIX
+  DIE: PlayerDIE
 --- !u!114 &1031731569462997248
 MonoBehaviour:
   m_ObjectHideFlags: 0

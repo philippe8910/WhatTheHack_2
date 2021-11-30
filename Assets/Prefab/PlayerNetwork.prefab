@@ -601,6 +601,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MoveSpeed: 4
+  IsDie: 0
   _PlayerBehaviour: 0
   rigidbody2D: {fileID: 0}
   FixComputers: {fileID: 0}

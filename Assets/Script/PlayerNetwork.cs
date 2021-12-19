@@ -168,6 +168,7 @@ public class PlayerNetwork : EntityBehaviour<ICustomPlayerState>
         else
         {
             state.Animator.Play(DIE);
+            PlayerHud.PlayerDie();
         }
         
     }

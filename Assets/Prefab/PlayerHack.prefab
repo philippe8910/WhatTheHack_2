@@ -533,7 +533,7 @@ RectTransform:
   - {fileID: 1180309010525651248}
   - {fileID: 4832651178976629387}
   m_Father: {fileID: 8420949427980107783}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -854,7 +854,7 @@ Transform:
   m_Children:
   - {fileID: 1835535156925337486}
   m_Father: {fileID: 8420949427980107783}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!20 &8420949425995927004
 Camera:
@@ -969,11 +969,11 @@ Transform:
   m_GameObject: {fileID: 8420949427980107782}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.55, y: 0.55, z: 0.55}
+  m_LocalScale: {x: 1.8, y: 1.8, z: 1.8}
   m_Children:
+  - {fileID: 8420949427981864415}
   - {fileID: 8420949425995927005}
   - {fileID: 6983261905267478094}
-  - {fileID: 8420949427981864415}
   - {fileID: 4835012152724215354}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -991,7 +991,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.18948495, y: -0.14701647}
+  m_Offset: {x: 0.14014104, y: 0.31995368}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -1002,7 +1002,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.1451246, y: 3.2643256}
+  m_Size: {x: 1.4198127, y: 4.198267}
   m_EdgeRadius: 0
 --- !u!50 &8420949427980107780
 Rigidbody2D:
@@ -1111,7 +1111,7 @@ GameObject:
   - component: {fileID: 8420949427981864415}
   - component: {fileID: 8420949427981864412}
   - component: {fileID: 8420949427981864413}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: P5_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1131,7 +1131,7 @@ Transform:
   m_Children:
   - {fileID: 9099884150746178739}
   m_Father: {fileID: 8420949427980107783}
-  m_RootOrder: 2
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &8420949427981864412
 SpriteRenderer:
@@ -1260,7 +1260,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7109994647935500547, guid: c7ed71aa95550854fb1911ba8db60a16, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c7ed71aa95550854fb1911ba8db60a16, type: 3}

@@ -7,7 +7,9 @@ using UnityEngine;
 
 public class PlayerNetwork : EntityBehaviour<ICustomPlayerState>
 {
-    [Header("Value")] 
+    [Header("Value")]
+
+    [SerializeField] public string PlayerName;
     
     [SerializeField] public float OrginalSpeed; 
     
@@ -51,10 +53,11 @@ public class PlayerNetwork : EntityBehaviour<ICustomPlayerState>
         state.SetAnimator(_animator);
 
         rigidbody2D = GetComponent<Rigidbody2D>();
-        
-        
+
+        PlayerName = PlayerPrefs.GetString("UserName");
+        state.PlayerName = PlayerName;
         //PlayerHud = GameObject.Find("PlayerHUD").GetComponent<PlayerHUD>();
-        
+
         //Camera.main.transform.parent = transform;
     }
 
@@ -66,9 +69,9 @@ public class PlayerNetwork : EntityBehaviour<ICustomPlayerState>
         FlipSpriteControll();
     }
 
-    public void IsDieCallBack()
+    public void PlayerNameCallBack()
     {
-        IsDie = state.IsDie;
+
     }
 
     private void Update()
@@ -140,14 +143,14 @@ public class PlayerNetwork : EntityBehaviour<ICustomPlayerState>
             {
                 if (state.IsHard)
                 {
-                    PlayerHud.PlayerFreeze();
+                    //PlayerHud.PlayerFreeze();
                     state.Animator.Play(HARD);
                 }
                 else
                 {
                     if (state.IsMove)
                     {
-                        PlayerHud.PlayerNormal();
+                        //PlayerHud.PlayerNormal();
                         state.Animator.Play(RUN);
                     }
                     else
@@ -279,6 +282,11 @@ public class PlayerNetwork : EntityBehaviour<ICustomPlayerState>
             // PlayerSprite.transform.localScale = 
             //    new Vector3(Mathf.Abs(PlayerSprite.transform.localScale.x) , PlayerSprite.transform.localScale.y , PlayerSprite.transform.localScale.z);
         }
+    }
+
+    public string GetName()
+    {
+        return PlayerName;
     }
 
     public void PlayerOnAttack()

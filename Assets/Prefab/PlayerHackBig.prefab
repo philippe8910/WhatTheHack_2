@@ -1190,13 +1190,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6fd437c287e777f40afea9765eb5ec5c, type: 3}
---- !u!20 &8420949425995927004 stripped
-Camera:
-  m_CorrespondingSourceObject: {fileID: 4894734193748568986, guid: 6fd437c287e777f40afea9765eb5ec5c, type: 3}
-  m_PrefabInstance: {fileID: 3976870008529823302}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &8420949425995927005 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4894734193748568987, guid: 6fd437c287e777f40afea9765eb5ec5c, type: 3}
+  m_PrefabInstance: {fileID: 3976870008529823302}
+  m_PrefabAsset: {fileID: 0}
+--- !u!20 &8420949425995927004 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 4894734193748568986, guid: 6fd437c287e777f40afea9765eb5ec5c, type: 3}
   m_PrefabInstance: {fileID: 3976870008529823302}
   m_PrefabAsset: {fileID: 0}

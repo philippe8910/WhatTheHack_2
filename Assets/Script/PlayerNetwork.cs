@@ -7,49 +7,44 @@ using UnityEngine;
 
 public class PlayerNetwork : EntityBehaviour<ICustomPlayerState>
 {
-    [Header("Value")]
+    [Header("Value")] [SerializeField] public string PlayerName;
 
-    [SerializeField] public string PlayerName;
-    
-    [SerializeField] public float OrginalSpeed; 
-    
+    [SerializeField] public float OrginalSpeed;
+
     [SerializeField] public float MoveSpeed;
-    
+
     [SerializeField] public float Dashtime;
-    
+
     [SerializeField] public float Dashpower;
 
     [SerializeField] public bool IsDie;
 
     [SerializeField] public bool IsDashing;
-    
-    [Header("Basic")]
-    
-    [SerializeField] private PlayerBehaviour _PlayerBehaviour;
+
+    [Header("Basic")] 
+    [SerializeField] public PlayerBehaviour _PlayerBehaviour;
 
     [SerializeField] public Rigidbody2D rigidbody2D;
 
     [SerializeField] public Computers FixComputers;
-    
+
     [SerializeField] public PlayerHUD PlayerHud;
 
     [SerializeField] public Camera MyCamera;
 
-    [Header("Animation")] 
-    
-    [SerializeField] public Animator _animator;
+    [Header("Animation")] [SerializeField] public Animator _animator;
 
     [SerializeField] public GameObject PlayerSprite;
 
-    [SerializeField] public string RUN, IDLE, HARD , FIX , DIE,DASH;
-    
+    [SerializeField] public string RUN, IDLE, HARD, FIX, DIE, DASH;
+
 
     // Start is called before the first frame update
     public override void Attached()
     {
         MoveSpeed = OrginalSpeed;
-        state.SetTransforms(state.PlayerTransform , transform);
-        state.SetTransforms(state.PlayerAnimatorTransform , PlayerSprite.transform);
+        state.SetTransforms(state.PlayerTransform, transform);
+        state.SetTransforms(state.PlayerAnimatorTransform, PlayerSprite.transform);
         state.SetAnimator(_animator);
 
         rigidbody2D = GetComponent<Rigidbody2D>();
@@ -65,24 +60,23 @@ public class PlayerNetwork : EntityBehaviour<ICustomPlayerState>
     public override void SimulateOwner()
     {
         PlayerPhysicControll();
-        StateMachineControll();
         FlipSpriteControll();
     }
 
     public void PlayerNameCallBack()
     {
-
     }
 
     private void Update()
     {
+        StateMachineControll();
         ControllAnimator();
-        
-        
+
         if (entity.IsOwner && !MyCamera.gameObject.activeInHierarchy)
         {
             MyCamera.gameObject.SetActive(true);
             PlayerHud.gameObject.SetActive(true);
+            PlayerHud.ComputerSlider.gameObject.SetActive(true);
         }
 
         if (Input.GetKeyDown(KeyCode.O))
@@ -95,15 +89,15 @@ public class PlayerNetwork : EntityBehaviour<ICustomPlayerState>
     {
         if (other.gameObject.tag == "Player")
         {
-
             if (_PlayerBehaviour != PlayerBehaviour.Die)
             {
-                _PlayerBehaviour = PlayerBehaviour.IDLE;
-                state.IsHard = false;
             }
-        }
 
-        
+            _PlayerBehaviour = PlayerBehaviour.IDLE;
+            state.IsHard = false;
+            state.IsDie = false;
+            state.Animator.Play(IDLE);
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -113,10 +107,9 @@ public class PlayerNetwork : EntityBehaviour<ICustomPlayerState>
             if (other.GetComponent<Computers>())
             {
                 FixComputers = other.GetComponent<Computers>();
-                
             }
         }
-        
+
         if (other.gameObject.tag == "Killer")
         {
             PlayerOnAttack();
@@ -138,9 +131,13 @@ public class PlayerNetwork : EntityBehaviour<ICustomPlayerState>
             if (state.IsFix)
             {
                 state.Animator.Play(FIX);
+                PlayerHud.ComputerSlider.gameObject.SetActive(true);
+                PlayerHud.ComputerSlider.value = FixComputers.FixValue;
+                PlayerHud.ComputerSlider.maxValue = FixComputers.FixValueMax;
             }
             else
             {
+                PlayerHud.ComputerSlider.gameObject.SetActive(false);
                 if (state.IsHard)
                 {
                     //PlayerHud.PlayerFreeze();
@@ -163,7 +160,6 @@ public class PlayerNetwork : EntityBehaviour<ICustomPlayerState>
                         {
                             state.Animator.Play(IDLE);
                         }
-                        
                     }
                 }
             }
@@ -171,30 +167,27 @@ public class PlayerNetwork : EntityBehaviour<ICustomPlayerState>
         else
         {
             state.Animator.Play(DIE);
-            PlayerHud.PlayerDie();
+            //PlayerHud.PlayerDie();
         }
-        
     }
 
     public virtual void AnimatorControll()
     {
-     
     }
 
 
     public IEnumerator PlayerDash()
     {
-            IsDashing = true;
-            _PlayerBehaviour = PlayerBehaviour.Dash;
-            state.IsDash = true;
-            MoveSpeed *= Dashpower;
-            yield return new WaitForSeconds(Dashtime);
-            MoveSpeed = OrginalSpeed;
-            state.IsDash = false;
-            IsDashing = false;
-            
-
+        IsDashing = true;
+        _PlayerBehaviour = PlayerBehaviour.Dash;
+        state.IsDash = true;
+        MoveSpeed *= Dashpower;
+        yield return new WaitForSeconds(Dashtime);
+        MoveSpeed = OrginalSpeed;
+        state.IsDash = false;
+        IsDashing = false;
     }
+
     public virtual void StateMachineControll()
     {
         if (Input.GetMouseButtonDown(2))
@@ -211,7 +204,7 @@ public class PlayerNetwork : EntityBehaviour<ICustomPlayerState>
 
             state.IsHard = true;
         }
-        
+
 
         if (FixComputers != null && Input.GetMouseButtonDown(0))
         {
@@ -219,15 +212,16 @@ public class PlayerNetwork : EntityBehaviour<ICustomPlayerState>
 
             state.IsFix = true;
         }
+
         if (FixComputers != null && Input.GetMouseButtonUp(0))
         {
             _PlayerBehaviour = PlayerBehaviour.IDLE;
-            
             state.IsFix = false;
         }
-        
 
-        if (_PlayerBehaviour != PlayerBehaviour.Hard && _PlayerBehaviour != PlayerBehaviour.Repiaring && _PlayerBehaviour != PlayerBehaviour.Die)
+
+        if (_PlayerBehaviour != PlayerBehaviour.Hard && _PlayerBehaviour != PlayerBehaviour.Repiaring &&
+            _PlayerBehaviour != PlayerBehaviour.Die)
         {
             if ((Input.GetAxisRaw("Horizontal") != 0 || Input.GetAxisRaw("Vertical") != 0))
             {
@@ -248,7 +242,8 @@ public class PlayerNetwork : EntityBehaviour<ICustomPlayerState>
     {
         if (_PlayerBehaviour == PlayerBehaviour.RUN)
         {
-            rigidbody2D.velocity = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical")) * MoveSpeed;
+            rigidbody2D.velocity =
+                new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical")) * MoveSpeed;
         }
         else
         {
@@ -270,16 +265,16 @@ public class PlayerNetwork : EntityBehaviour<ICustomPlayerState>
     {
         if (Input.GetAxisRaw("Horizontal") > 0)
         {
-            PlayerSprite.transform.rotation = Quaternion.Euler(0,180,0);
-            
+            PlayerSprite.transform.rotation = Quaternion.Euler(0, 180, 0);
+
             // PlayerSprite.transform.localScale = 
             //    new Vector3(-Mathf.Abs(PlayerSprite.transform.localScale.x) , PlayerSprite.transform.localScale.y , PlayerSprite.transform.localScale.z);
         }
-        
+
         if (Input.GetAxisRaw("Horizontal") < 0)
-        { 
-            PlayerSprite.transform.rotation = Quaternion.Euler(0,0,0);
-            
+        {
+            PlayerSprite.transform.rotation = Quaternion.Euler(0, 0, 0);
+
             // PlayerSprite.transform.localScale = 
             //    new Vector3(Mathf.Abs(PlayerSprite.transform.localScale.x) , PlayerSprite.transform.localScale.y , PlayerSprite.transform.localScale.z);
         }
@@ -293,7 +288,7 @@ public class PlayerNetwork : EntityBehaviour<ICustomPlayerState>
     public void PlayerOnAttack()
     {
         state.IsDie = true;
+        state.Animator.Play(DIE);
         _PlayerBehaviour = PlayerBehaviour.Die;
     }
-    
 }

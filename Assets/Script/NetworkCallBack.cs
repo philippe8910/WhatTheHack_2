@@ -25,12 +25,12 @@ public class NetworkCallBack : GlobalEventListener
             Debug.Log("IsNotServer!!!!!!!!!!!!!!!!");
         }
         
-        GameObject _FOV = Instantiate(FOV, Vector3.zero, Quaternion.identity);
+        //GameObject _FOV = Instantiate(FOV, Vector3.zero, Quaternion.identity);
         //GameObject Cam = Instantiate(Camera, _Player.transform.position, Quaternion.identity);
         
         
-        _Player.GetComponent<CharacterView>().fovprefab = _FOV;
-        _Player.GetComponent<CharacterView>().fovScript = _FOV.GetComponent<FieldOfView>();
+        //_Player.GetComponent<CharacterView>().fovprefab = _FOV;
+        //_Player.GetComponent<CharacterView>().fovScript = _FOV.GetComponent<FieldOfView>();
 
         //Cam.GetComponent<FollowTarget>().objetivo = _Player.transform;
 

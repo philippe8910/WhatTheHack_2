@@ -48,7 +48,7 @@ MonoBehaviour:
   fov: 360
   numAristas: 360
   anguloInicial: 0
-  distanciaVision: 2
+  distanciaVision: 20
   layerMask:
     serializedVersion: 2
     m_Bits: 256

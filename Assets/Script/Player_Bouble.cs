@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 
-enum PlayerBehaviour
+public enum PlayerBehaviour
 {
     IDLE,
     RUN,

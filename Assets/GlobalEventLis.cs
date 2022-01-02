@@ -16,9 +16,14 @@ public class GlobalEventLis : GlobalEventListener
     {
         Debug.Log(evnt.Message);
 
-        if(player.GetName() == evnt.Message)
+        if(player.GetName() == evnt.Message && player._PlayerBehaviour != PlayerBehaviour.Hard)
         {
             player.PlayerOnAttack();
+        }
+
+        if (evnt.Message == "TeleportPlayer")
+        {
+            transform.position = new Vector3(1032.7f, -3, 0);
         }
     }
 }

@@ -7,9 +7,9 @@ using UnityEngine.UI;
 
 public class Computers : EntityBehaviour<IComputer>
 {
-    [SerializeField] private float FixValueMax;
+    [SerializeField] public float FixValueMax;
 
-    [SerializeField] private float FixValue;
+    [SerializeField] public float FixValue;
 
     [SerializeField] private bool IsLock;
 

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1180309010525651248}
   - component: {fileID: 3417418251099203575}
   - component: {fileID: 1416801096227775699}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Skill_Dash
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -88,7 +88,7 @@ GameObject:
   - component: {fileID: 102715571114519021}
   - component: {fileID: 5155152863926326993}
   - component: {fileID: 1691776192944261048}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -182,7 +182,7 @@ GameObject:
   - component: {fileID: 3307780146415445504}
   - component: {fileID: 7175526805050856299}
   - component: {fileID: 174261857623651031}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -261,7 +261,7 @@ GameObject:
   - component: {fileID: 4259455925351916838}
   - component: {fileID: 488860736778511244}
   - component: {fileID: 6780129101140485135}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Map
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -336,7 +336,7 @@ GameObject:
   - component: {fileID: 4832651178976629387}
   - component: {fileID: 1802961740224483906}
   - component: {fileID: 4493570389144932668}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Skill_Hard
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -413,7 +413,7 @@ GameObject:
   - component: {fileID: 5905495855131690084}
   - component: {fileID: 1794093357660263331}
   - component: {fileID: 5220490230655933690}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -509,7 +509,7 @@ GameObject:
   - component: {fileID: 4840818952763781925}
   - component: {fileID: 6921569602818971396}
   - component: {fileID: 823732923040602473}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: PlayerHUD
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -621,6 +621,7 @@ MonoBehaviour:
   HintImage: {fileID: 0}
   ComputerRepairSprite: {fileID: 0}
   HelpAlleySprite: {fileID: 0}
+  ComputerSlider: {fileID: 0}
 --- !u!1 &7107650054995112387
 GameObject:
   m_ObjectHideFlags: 0
@@ -662,7 +663,7 @@ GameObject:
   - component: {fileID: 99725419259474818}
   - component: {fileID: 1369797523314449806}
   - component: {fileID: 1473382396994041300}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Skill_Help
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -739,7 +740,7 @@ GameObject:
   - component: {fileID: 9186425123045804088}
   - component: {fileID: 7714832409421851949}
   - component: {fileID: 811572157165248139}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -929,6 +930,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1
   m_VolumeTrigger: {fileID: 0}
+  m_VolumeFrameworkUpdateModeOption: 2
   m_RenderPostProcessing: 0
   m_Antialiasing: 0
   m_AntialiasingQuality: 2
@@ -952,9 +954,8 @@ GameObject:
   - component: {fileID: 8420949427980107780}
   - component: {fileID: 7653848584573197793}
   - component: {fileID: 4868932352701747053}
-  - component: {fileID: 3478893934016161668}
   - component: {fileID: 3423455319813729219}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: PlayerHack
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -1067,8 +1068,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af3f87267b0547544852c272716dbd5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MoveSpeed: 5
-  AttackRangeValue: 0.38
+  MoveSpeed: 15
+  AttackRangeValue: 2.16
   IsDie: 0
   _PlayerBehaviour: 0
   rigidbody2D: {fileID: 8420949427980107780}
@@ -1078,29 +1079,12 @@ MonoBehaviour:
   MyCamera: {fileID: 8420949425995927004}
   PlayerMask:
     serializedVersion: 2
-    m_Bits: 9216
+    m_Bits: 25600
   _animator: {fileID: 8420949427981864413}
   PlayerSprite: {fileID: 8420949427981864414}
   RUN: HackRUN
   IDLE: HackIDLE
   HARD: ATTACK
---- !u!114 &3478893934016161668
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8420949427980107782}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e1b034b27a08cf84bad71f0c2795eb40, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  collisionsLayers:
-    serializedVersion: 2
-    m_Bits: 4352
-  fovprefab: {fileID: 0}
-  fovScript: {fileID: 0}
 --- !u!114 &3423455319813729219
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1124,7 +1108,7 @@ GameObject:
   - component: {fileID: 8420949427981864415}
   - component: {fileID: 8420949427981864412}
   - component: {fileID: 8420949427981864413}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: P5_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1273,7 +1257,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7109994647935500547, guid: c7ed71aa95550854fb1911ba8db60a16, type: 3}
       propertyPath: m_Layer
-      value: 10
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c7ed71aa95550854fb1911ba8db60a16, type: 3}
@@ -1295,7 +1279,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3789967401003252932, guid: 63c0602e9236267459b487427780f942, type: 3}
       propertyPath: m_Layer
-      value: 11
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3789967401003252932, guid: 63c0602e9236267459b487427780f942, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3789967401003252935, guid: 63c0602e9236267459b487427780f942, type: 3}
       propertyPath: m_RootOrder

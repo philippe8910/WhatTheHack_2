@@ -19,6 +19,8 @@ public class PlayerHUD : MonoBehaviour
 
     [SerializeField] private Sprite ComputerRepairSprite , HelpAlleySprite;
 
+    [SerializeField] public Slider ComputerSlider;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -27,6 +29,7 @@ public class PlayerHUD : MonoBehaviour
         PlayerDieUI = transform.GetComponentInChildren<GameObject>();
         PlayerFreezeUI = transform.GetComponentInChildren<GameObject>();
         PlayerNoramlUI = transform.GetComponentInChildren<GameObject>();
+        ComputerSlider = transform.GetComponentInChildren<Slider>();
     }
 
     public void ShowRepairComputerHint()

@@ -21,7 +21,10 @@ public class CharacterView: MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        fovScript.SetOrigin(transform.position);
+        if(fovScript != null)
+        {
+            fovScript.SetOrigin(transform.position);
+        }
     }
     
 

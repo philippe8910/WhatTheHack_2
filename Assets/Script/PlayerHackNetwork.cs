@@ -18,7 +18,7 @@ public class PlayerHackNetwork : EntityBehaviour<ICustomPlayerHackState>
     
     [Header("Basic")]
     
-    [SerializeField] private PlayerBehaviour _PlayerBehaviour;
+    [SerializeField] public PlayerBehaviour _PlayerBehaviour;
 
     [SerializeField] public Rigidbody2D rigidbody2D;
 
@@ -63,7 +63,6 @@ public class PlayerHackNetwork : EntityBehaviour<ICustomPlayerHackState>
     public override void SimulateOwner()
     {
         PlayerPhysicControll();
-        StateMachineControll();
         FlipSpriteControll();
     }
     
@@ -71,7 +70,8 @@ public class PlayerHackNetwork : EntityBehaviour<ICustomPlayerHackState>
     private void Update()
     {
         ControllAnimator();
-        
+        StateMachineControll();
+
         
         if (entity.IsOwner && !MyCamera.gameObject.activeInHierarchy)
         {
@@ -148,7 +148,13 @@ public class PlayerHackNetwork : EntityBehaviour<ICustomPlayerHackState>
             
             if (Physics2D.OverlapCircle(AttackRange.position , AttackRangeValue , PlayerMask))
             {
-                Physics2D.OverlapCircle(AttackRange.position , AttackRangeValue , PlayerMask).gameObject.GetComponent<PlayerNetwork>().PlayerOnAttack();
+                var evnt = PlayerOnAttackEvent.Create();
+
+                string name = Physics2D.OverlapCircle(AttackRange.position, AttackRangeValue, PlayerMask).GetComponent<PlayerNetwork>().GetName();
+                evnt.Message = name;
+                evnt.Send();
+
+                Debug.Log(evnt.Message);
             }
             
             
@@ -196,6 +202,19 @@ public class PlayerHackNetwork : EntityBehaviour<ICustomPlayerHackState>
             rigidbody2D.velocity = Vector2.zero;
         }
 
+        if (Input.GetButtonDown("Jump"))
+        {
+            var evnt = PlayerOnAttackEvent.Create();
+
+            string name = "TeleportPlayer";
+            evnt.Message = name;
+            evnt.Send();
+
+            Debug.Log(evnt.Message);
+        }
+        
+        /*
+
         if (FixComputers != null && Input.GetMouseButtonDown(0))
         {
             FixComputers.StartRepiaringComputer();
@@ -205,6 +224,8 @@ public class PlayerHackNetwork : EntityBehaviour<ICustomPlayerHackState>
         {
             FixComputers.StopRepiaringComputer();
         }
+        
+        */
     }
 
     public virtual void FlipSpriteControll()

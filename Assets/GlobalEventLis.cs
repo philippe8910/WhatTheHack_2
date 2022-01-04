@@ -24,7 +24,7 @@ public class GlobalEventLis : GlobalEventListener
 
         if (evnt.Message == "TeleportPlayer")
         {
-            transform.position = new Vector3(1032.7f, -3, 0);
+            transform.position = Vector3.zero;
         }
     }
 }

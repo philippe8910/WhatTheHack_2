@@ -304,6 +304,11 @@ public class PlayerNetwork : EntityBehaviour<ICustomPlayerState>
 
     public bool ReturnStateIsDie()
     {
-        return state.IsDie;
+        return state.IsDie || state.IsHard;
+    }
+
+    public void GoPlayGame()
+    {
+        transform.position = Vector3.zero;
     }
 }

@@ -990,6 +990,28 @@
       "Name": "AttackSkill",
       "Guid": "906b58e0-4086-4033-a671-2ce756c5fdf6",
       "Groups": []
+    },
+    {
+      "$type": "Photon.Bolt.Compiler.EventDefinition, bolt.compiler",
+      "Properties": [
+        {
+          "Name": "OwO",
+          "Enabled": true,
+          "Expanded": true,
+          "ReplicationMode": 1,
+          "Priority": 1,
+          "PropertyType": {
+            "$type": "Photon.Bolt.Compiler.PropertyTypeString, bolt.compiler",
+            "MaxLength": 1
+          },
+          "AssetSettings": {
+            "$type": "Photon.Bolt.Compiler.PropertyEventSettings, bolt.compiler"
+          }
+        }
+      ],
+      "Name": "PlayerOtherEvent",
+      "Guid": "7e868565-fbc9-4924-8e1d-841a5b31f754",
+      "Groups": []
     }
   ],
   "ActiveGroup": "Everything"

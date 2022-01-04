@@ -757,10 +757,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerName: 
-  OrginalSpeed: 16
+  OrginalSpeed: 10
   MoveSpeed: 0
-  Dashtime: 0.4
-  Dashpower: 5
+  Dashtime: 8
+  Dashpower: 4
   IsDie: 0
   IsDashing: 0
   _PlayerBehaviour: 0
@@ -948,7 +948,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 3
   m_Sprite: {fileID: -2658676527286475340, guid: 9447daf4ee056f74994fb32274a8cc1f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

@@ -21,5 +21,6 @@ MonoBehaviour:
   - {fileID: 1862175297743749646, guid: caac5464986ff1f419d1a97912ae0a66, type: 3}
   - {fileID: 4888102931452351976, guid: 9e43bed3a89595b448bba2383d2f8e6c, type: 3}
   - {fileID: 282263086625384394, guid: f49add2c3f475e84eb179739bb9b74eb, type: 3}
+  - {fileID: 8185104246469723416, guid: 83bd87351716ba949b67b8507be4f471, type: 3}
   - {fileID: 7417456466115280886, guid: 54aee7842bac94f43bdb3d78fabd741c, type: 3}
   SearchPaths: []

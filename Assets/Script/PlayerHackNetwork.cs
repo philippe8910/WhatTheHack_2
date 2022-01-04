@@ -107,6 +107,15 @@ public class PlayerHackNetwork : EntityBehaviour<ICustomPlayerHackState>
             BoltNetwork.LoadScene("GoodEndMenu");
         }
 
+        if (PlayerNetworks.Length >= 1 && Input.GetKeyDown(KeyCode.Space))
+        {
+            var evnt = PlayerOtherEvent.Create();
+            evnt.OwO = "Teleport";
+            transform.position = new Vector3(0, 50, 0);
+            evnt.Send();
+            Debug.Log(evnt.OwO);
+        }
+
 
         if (entity.IsOwner && !MyCamera.gameObject.activeInHierarchy)
         {
@@ -242,16 +251,7 @@ public class PlayerHackNetwork : EntityBehaviour<ICustomPlayerHackState>
             rigidbody2D.velocity = Vector2.zero;
         }
 
-        if (Input.GetButtonDown("Jump"))
-        {
-            var evnt = PlayerOnAttackEvent.Create();
-
-            string name = "TeleportPlayer";
-            evnt.Message = name;
-            evnt.Send();
-
-            Debug.Log(evnt.Message);
-        }
+        
 
         if (Input.GetMouseButtonDown(2))
         {

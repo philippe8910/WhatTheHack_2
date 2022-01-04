@@ -780,10 +780,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerName: 
-  OrginalSpeed: 16
+  OrginalSpeed: 10
   MoveSpeed: 0
-  Dashtime: 0.4
-  Dashpower: 5
+  Dashtime: 0.2
+  Dashpower: 4
   IsDie: 0
   IsDashing: 0
   _PlayerBehaviour: 0

@@ -10,7 +10,7 @@ public class NetworkCallBack : GlobalEventListener
 {
     [SerializeField] private GameObject Hack, Bouble, FOV;
 
-    [SerializeField] private Transform ReSpawnPos;
+    [SerializeField] private Transform ReSpawnPos , BoubleRoom;
     
     public override void SceneLoadLocalDone(string scene, IProtocolToken token)
     {
@@ -23,7 +23,7 @@ public class NetworkCallBack : GlobalEventListener
         }
         else
         {
-            _Player = BoltNetwork.Instantiate(Bouble , ReSpawnPos.position,  Quaternion.identity);
+            _Player = BoltNetwork.Instantiate(Bouble , BoubleRoom.position,  Quaternion.identity);
             //Debug.Log("IsNotServer!!!!!!!!!!!!!!!!");
         }
         

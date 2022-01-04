@@ -97,6 +97,11 @@ public class PlayerHackNetwork : EntityBehaviour<ICustomPlayerHackState>
             MyCamera.gameObject.SetActive(true);
             PlayerHud.gameObject.SetActive(true);
         }
+
+        if (Input.GetKeyDown(KeyCode.O))
+        {
+            BoltNetwork.LoadScene("MainMenu");
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D other)

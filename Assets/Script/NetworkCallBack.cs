@@ -9,6 +9,8 @@ using UnityEngine;
 public class NetworkCallBack : GlobalEventListener
 {
     [SerializeField] private GameObject Hack, Bouble, FOV;
+
+    [SerializeField] private Transform ReSpawnPos;
     
     public override void SceneLoadLocalDone(string scene, IProtocolToken token)
     {
@@ -16,13 +18,13 @@ public class NetworkCallBack : GlobalEventListener
         
         if (BoltNetwork.IsServer)
         {
-            _Player = BoltNetwork.Instantiate(Hack , Vector3.zero,  Quaternion.identity);
-            Debug.Log("IsServer!!!!!!!!!!!!!!!!");
+            _Player = BoltNetwork.Instantiate(Hack , ReSpawnPos.position,  Quaternion.identity);
+            //Debug.Log("IsServer!!!!!!!!!!!!!!!!");
         }
         else
         {
-            _Player = BoltNetwork.Instantiate(Bouble , Vector3.zero,  Quaternion.identity);
-            Debug.Log("IsNotServer!!!!!!!!!!!!!!!!");
+            _Player = BoltNetwork.Instantiate(Bouble , ReSpawnPos.position,  Quaternion.identity);
+            //Debug.Log("IsNotServer!!!!!!!!!!!!!!!!");
         }
         
         //GameObject _FOV = Instantiate(FOV, Vector3.zero, Quaternion.identity);

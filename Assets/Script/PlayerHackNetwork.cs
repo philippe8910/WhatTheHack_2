@@ -47,6 +47,8 @@ public class PlayerHackNetwork : EntityBehaviour<ICustomPlayerHackState>
     [Header("Computer")] 
     
     [SerializeField] private Computers[] _computersList;
+
+    [SerializeField] private PlayerNetwork[] PlayerNetworks;
     
 
     // Start is called before the first frame update
@@ -78,6 +80,13 @@ public class PlayerHackNetwork : EntityBehaviour<ICustomPlayerHackState>
 
     private void Update()
     {
+        if (PlayerNetworks.Length < 4)
+        {
+            PlayerNetworks = GameObject.FindObjectsOfType<PlayerNetwork>();
+        }
+        
+
+
         if (entity.IsOwner)
         { 
             StateMachineControll();
@@ -89,6 +98,13 @@ public class PlayerHackNetwork : EntityBehaviour<ICustomPlayerHackState>
         if (AllComputerCompelet())
         {
             Debug.Log("All Computer Compelet");
+            BoltNetwork.LoadScene("BadEndMenu");
+        }
+
+        if (CheckPlayerAllDead() && PlayerNetworks.Length != 0)
+        {
+            Debug.Log("All Dead");
+            BoltNetwork.LoadScene("GoodEndMenu");
         }
 
 
@@ -100,7 +116,7 @@ public class PlayerHackNetwork : EntityBehaviour<ICustomPlayerHackState>
 
         if (Input.GetKeyDown(KeyCode.O))
         {
-            BoltNetwork.LoadScene("MainMenu");
+            BoltNetwork.LoadScene("END_1");
         }
     }
 
@@ -311,5 +327,20 @@ public class PlayerHackNetwork : EntityBehaviour<ICustomPlayerHackState>
     public void StopSkill()
     {
         state.IsSkill = false;
+    }
+
+    private bool CheckPlayerAllDead()
+    {
+        bool IsAllDead = true;
+
+        for (int i = 0; i < PlayerNetworks.Length; i++)
+        {
+            if (!PlayerNetworks[i].ReturnStateIsDie())
+            {
+                IsAllDead = false;
+            }
+        }
+
+        return IsAllDead;
     }
 }

@@ -21,6 +21,8 @@ public class PlayerNetwork : EntityBehaviour<ICustomPlayerState>
 
     [SerializeField] public bool IsDashing;
 
+    [SerializeField] public bool CanDash;
+
     [Header("Basic")] 
     [SerializeField] public PlayerBehaviour _PlayerBehaviour;
 
@@ -103,11 +105,17 @@ public class PlayerNetwork : EntityBehaviour<ICustomPlayerState>
             {
             }
 
-            _PlayerBehaviour = PlayerBehaviour.IDLE;
+            _PlayerBehaviour = PlayerBehaviour.Reburn;
+            Invoke("LockReBurn" , 0.5f);
             state.IsHard = false;
             state.IsDie = false;
-            state.Animator.Play(IDLE);
+            state.Animator.Play("PlayerReburn");
         }
+    }
+
+    private void LockReBurn()
+    {
+        _PlayerBehaviour = PlayerBehaviour.IDLE;
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -202,9 +210,11 @@ public class PlayerNetwork : EntityBehaviour<ICustomPlayerState>
     {
         if (Input.GetMouseButtonDown(2))
         {
-            if (!IsDashing)
+            if (!IsDashing && !CanDash)
             {
                 StartCoroutine(PlayerDash());
+                CanDash = true;
+                Invoke("LockDash" , 8);
             }
         }
 
@@ -246,6 +256,11 @@ public class PlayerNetwork : EntityBehaviour<ICustomPlayerState>
                 state.IsMove = false;
             }
         }
+    }
+
+    private void LockDash()
+    {
+        CanDash = false;
     }
 
     public virtual void PlayerPhysicControll()

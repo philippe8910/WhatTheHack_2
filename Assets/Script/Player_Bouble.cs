@@ -12,7 +12,8 @@ public enum PlayerBehaviour
     Hard,
     Die,
     Dash,
-    Skill
+    Skill,
+    Reburn
 }
 
 public class Player_Bouble : MonoBehaviour

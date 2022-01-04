@@ -987,6 +987,7 @@ MonoBehaviour:
   HintImage: {fileID: 0}
   ComputerRepairSprite: {fileID: 0}
   HelpAlleySprite: {fileID: 0}
+  ComputerSlider: {fileID: 0}
 --- !u!1 &4888102932093972338
 GameObject:
   m_ObjectHideFlags: 0

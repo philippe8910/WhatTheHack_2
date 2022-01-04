@@ -16,9 +16,10 @@ public class GlobalEventLis : GlobalEventListener
     {
         Debug.Log(evnt.Message);
 
-        if(player.GetName() == evnt.Message && player._PlayerBehaviour != PlayerBehaviour.Hard)
+        if(evnt.MyProflie.IsOwner && player._PlayerBehaviour != PlayerBehaviour.Hard)
         {
             player.PlayerOnAttack();
+            Debug.Log("I am Attacked");
         }
 
         if (evnt.Message == "TeleportPlayer")

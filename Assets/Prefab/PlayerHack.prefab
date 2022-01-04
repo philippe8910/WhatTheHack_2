@@ -1081,11 +1081,13 @@ MonoBehaviour:
   PlayerMask:
     serializedVersion: 2
     m_Bits: 25600
+  SkillEffect: {fileID: 3689936304533160377}
   _animator: {fileID: 8420949427981864413}
   PlayerSprite: {fileID: 8420949427981864414}
   RUN: HackRUN
   IDLE: HackIDLE
   HARD: ATTACK
+  _computersList: []
 --- !u!114 &3423455319813729219
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1467,6 +1469,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 54aee7842bac94f43bdb3d78fabd741c, type: 3}
+--- !u!1 &3689936304533160377 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7417456466115280886, guid: 54aee7842bac94f43bdb3d78fabd741c, type: 3}
+  m_PrefabInstance: {fileID: 6180434984830893647}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &5856684513601721685 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 324909360067046170, guid: 54aee7842bac94f43bdb3d78fabd741c, type: 3}

@@ -735,6 +735,23 @@
             "ExtrapolationMaxFrames": 9,
             "SnapMagnitude": 10.0
           }
+        },
+        {
+          "Name": "IsSkill",
+          "Enabled": true,
+          "Expanded": true,
+          "ReplicationMode": 1,
+          "Priority": 1,
+          "PropertyType": {
+            "$type": "Photon.Bolt.Compiler.PropertyTypeBool, bolt.compiler"
+          },
+          "AssetSettings": {
+            "$type": "Photon.Bolt.Compiler.PropertyStateSettings, bolt.compiler",
+            "ExtrapolationErrorTolerance": 0.25,
+            "_ExtrapolationCorrectionFrames": 6,
+            "ExtrapolationMaxFrames": 9,
+            "SnapMagnitude": 10.0
+          }
         }
       ],
       "PacketMaxBits": 512,
@@ -837,10 +854,141 @@
           "AssetSettings": {
             "$type": "Photon.Bolt.Compiler.PropertyEventSettings, bolt.compiler"
           }
+        },
+        {
+          "Name": "MyProflie",
+          "Enabled": true,
+          "Expanded": true,
+          "ReplicationMode": 1,
+          "Priority": 1,
+          "PropertyType": {
+            "$type": "Photon.Bolt.Compiler.PropertyTypeEntity, bolt.compiler"
+          },
+          "AssetSettings": {
+            "$type": "Photon.Bolt.Compiler.PropertyEventSettings, bolt.compiler"
+          }
         }
       ],
       "Name": "PlayerOnAttackEvent",
       "Guid": "15a1cf23-f454-47a6-8879-a30d7b16e95d",
+      "Groups": []
+    },
+    {
+      "$type": "Photon.Bolt.Compiler.EventDefinition, bolt.compiler",
+      "Properties": [
+        {
+          "Name": "FixedValue",
+          "Enabled": true,
+          "Expanded": true,
+          "ReplicationMode": 1,
+          "Priority": 1,
+          "PropertyType": {
+            "$type": "Photon.Bolt.Compiler.PropertyTypeFloat, bolt.compiler",
+            "Compression": {
+              "MinValue": -2048,
+              "MaxValue": 2048,
+              "Accuracy": 0.01,
+              "Pack": 100.0,
+              "Read": 0.01,
+              "Shift": 2048.0,
+              "BitsRequired": 19
+            }
+          },
+          "AssetSettings": {
+            "$type": "Photon.Bolt.Compiler.PropertyEventSettings, bolt.compiler"
+          }
+        },
+        {
+          "Name": "Name",
+          "Enabled": true,
+          "Expanded": true,
+          "ReplicationMode": 1,
+          "Priority": 1,
+          "PropertyType": {
+            "$type": "Photon.Bolt.Compiler.PropertyTypeString, bolt.compiler",
+            "MaxLength": 1
+          },
+          "AssetSettings": {
+            "$type": "Photon.Bolt.Compiler.PropertyEventSettings, bolt.compiler"
+          }
+        }
+      ],
+      "Name": "RepairComputer",
+      "Guid": "885225b5-5312-47dc-8bb6-3736d96efa1b",
+      "Groups": []
+    },
+    {
+      "$type": "Photon.Bolt.Compiler.StateDefinition, bolt.compiler",
+      "Properties": [],
+      "PacketMaxBits": 512,
+      "PacketMaxProperties": 16,
+      "InitialPositionCompression": {
+        "Compression": [
+          {
+            "MinValue": -1024,
+            "MaxValue": 1024,
+            "Accuracy": 0.01,
+            "Pack": 100.0,
+            "Read": 0.01,
+            "Shift": 1024.0,
+            "BitsRequired": 18
+          },
+          {
+            "MinValue": -1024,
+            "MaxValue": 1024,
+            "Accuracy": 0.01,
+            "Pack": 100.0,
+            "Read": 0.01,
+            "Shift": 1024.0,
+            "BitsRequired": 18
+          },
+          {
+            "MinValue": -1024,
+            "MaxValue": 1024,
+            "Accuracy": 0.01,
+            "Pack": 100.0,
+            "Read": 0.01,
+            "Shift": 1024.0,
+            "BitsRequired": 18
+          }
+        ]
+      },
+      "InitialRotationCompression": {
+        "EulerCompression": [
+          {
+            "MaxValue": 360,
+            "Accuracy": 1.0,
+            "Pack": 1.0,
+            "Read": 1.0,
+            "BitsRequired": 9
+          },
+          {
+            "MaxValue": 360,
+            "Accuracy": 1.0,
+            "Pack": 1.0,
+            "Read": 1.0,
+            "BitsRequired": 9
+          },
+          {
+            "MaxValue": 360,
+            "Accuracy": 1.0,
+            "Pack": 1.0,
+            "Read": 1.0,
+            "BitsRequired": 9
+          }
+        ],
+        "QuaternionCompression": {
+          "MinValue": -1,
+          "MaxValue": 1,
+          "Accuracy": 0.01,
+          "Pack": 100.0,
+          "Read": 0.01,
+          "Shift": 1.0,
+          "BitsRequired": 8
+        }
+      },
+      "Name": "AttackSkill",
+      "Guid": "906b58e0-4086-4033-a671-2ce756c5fdf6",
       "Groups": []
     }
   ],

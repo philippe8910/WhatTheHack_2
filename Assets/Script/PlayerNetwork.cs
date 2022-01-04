@@ -46,10 +46,11 @@ public class PlayerNetwork : EntityBehaviour<ICustomPlayerState>
         state.SetTransforms(state.PlayerTransform, transform);
         state.SetTransforms(state.PlayerAnimatorTransform, PlayerSprite.transform);
         state.SetAnimator(_animator);
+        
+        PlayerName = PlayerPrefs.GetString("UserName");
+        Debug.Log(PlayerName);
 
         rigidbody2D = GetComponent<Rigidbody2D>();
-
-        PlayerName = PlayerPrefs.GetString("UserName");
         state.PlayerName = PlayerName;
         //PlayerHud = GameObject.Find("PlayerHUD").GetComponent<PlayerHUD>();
 
@@ -59,7 +60,6 @@ public class PlayerNetwork : EntityBehaviour<ICustomPlayerState>
     // Update is called once per frame
     public override void SimulateOwner()
     {
-        PlayerPhysicControll();
         FlipSpriteControll();
     }
 
@@ -69,8 +69,18 @@ public class PlayerNetwork : EntityBehaviour<ICustomPlayerState>
 
     private void Update()
     {
-        StateMachineControll();
         ControllAnimator();
+
+        if (entity.IsOwner)
+        {
+            StateMachineControll();
+            ControllAnimator();
+            PlayerPhysicControll();
+            
+            StateMachineControll();
+            PlayerPhysicControll();
+        }
+
 
         if (entity.IsOwner && !MyCamera.gameObject.activeInHierarchy)
         {

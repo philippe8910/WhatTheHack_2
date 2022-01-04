@@ -23,6 +23,11 @@ public class Computers : EntityBehaviour<IComputer>
         state.AddCallback("RepairValue" , RepairValueCallBack);
     }
 
+    public bool GetCompeletFixed()
+    {
+        return FixValue >= FixValueSlider.maxValue;
+    }
+
     private void RepairValueCallBack()
     {
         FixValue = state.RepairValue;
@@ -63,6 +68,13 @@ public class Computers : EntityBehaviour<IComputer>
             FixValue += 0.1f;
             yield return new WaitForSeconds(0.1f);
             FixValueSlider.value = FixValue;
+
+            var evnt = RepairComputer.Create();
+
+            evnt.FixedValue = FixValue+=0.1f;
+            evnt.Name = gameObject.name;
+            evnt.Send();
+            
             StartCoroutine(StartRepiarComputer());
         }
         else

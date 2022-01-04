@@ -32,6 +32,8 @@ public class PlayerHackNetwork : EntityBehaviour<ICustomPlayerHackState>
 
     [SerializeField] public LayerMask PlayerMask;
 
+    [SerializeField] public GameObject SkillEffect;
+
    // [SerializeField] public GameObject AttackZone;
 
     [Header("Animation")] 
@@ -41,6 +43,10 @@ public class PlayerHackNetwork : EntityBehaviour<ICustomPlayerHackState>
     [SerializeField] public GameObject PlayerSprite;
 
     [SerializeField] public string RUN, IDLE, HARD;
+
+    [Header("Computer")] 
+    
+    [SerializeField] private Computers[] _computersList;
     
 
     // Start is called before the first frame update
@@ -52,7 +58,7 @@ public class PlayerHackNetwork : EntityBehaviour<ICustomPlayerHackState>
 
         rigidbody2D = GetComponent<Rigidbody2D>();
 
-
+        _computersList = GameObject.FindObjectsOfType<Computers>();
        
         //PlayerHud = GameObject.Find("PlayerHUD").GetComponent<PlayerHUD>();
         
@@ -62,17 +68,30 @@ public class PlayerHackNetwork : EntityBehaviour<ICustomPlayerHackState>
     // Update is called once per frame
     public override void SimulateOwner()
     {
-        PlayerPhysicControll();
-        FlipSpriteControll();
+        if (entity.IsOwner)
+        {
+            PlayerPhysicControll();
+            FlipSpriteControll();
+        }
     }
     
 
     private void Update()
     {
-        ControllAnimator();
-        StateMachineControll();
-
+        if (entity.IsOwner)
+        { 
+            StateMachineControll();
+        }
         
+        ControllAnimator();
+
+
+        if (AllComputerCompelet())
+        {
+            Debug.Log("All Computer Compelet");
+        }
+
+
         if (entity.IsOwner && !MyCamera.gameObject.activeInHierarchy)
         {
             MyCamera.gameObject.SetActive(true);
@@ -116,21 +135,30 @@ public class PlayerHackNetwork : EntityBehaviour<ICustomPlayerHackState>
 
     public virtual void ControllAnimator()
     {
-        if (state.IsAttack)
+        if (state.IsSkill)
         {
-            state.Animator.Play(HARD);
+            state.Animator.Play("Hack_Skill");
         }
         else
         {
-            if (state.IsMoveHack)
+            if (state.IsAttack)
             {
-                state.Animator.Play(RUN);
+                state.Animator.Play(HARD);
             }
             else
             {
-                state.Animator.Play(IDLE);
+                if (state.IsMoveHack)
+                {
+                    state.Animator.Play(RUN);
+                }
+                else
+                {
+                    state.Animator.Play(IDLE);
+                }
             }
         }
+        
+        
     }
 
     public virtual void AnimatorControll()
@@ -152,6 +180,8 @@ public class PlayerHackNetwork : EntityBehaviour<ICustomPlayerHackState>
 
                 string name = Physics2D.OverlapCircle(AttackRange.position, AttackRangeValue, PlayerMask).GetComponent<PlayerNetwork>().GetName();
                 evnt.Message = name;
+                evnt.MyProflie = Physics2D.OverlapCircle(AttackRange.position, AttackRangeValue, PlayerMask)
+                    .GetComponent<BoltEntity>();
                 evnt.Send();
 
                 Debug.Log(evnt.Message);
@@ -162,17 +192,6 @@ public class PlayerHackNetwork : EntityBehaviour<ICustomPlayerHackState>
 
             Invoke("AttackStop" , 0.5f);
         }
-        
-
-        if (FixComputers != null && Input.GetMouseButtonDown(0))
-        {
-            _PlayerBehaviour = PlayerBehaviour.Repiaring;
-        }
-        if (FixComputers != null && Input.GetMouseButtonUp(0))
-        {
-            _PlayerBehaviour = PlayerBehaviour.IDLE;
-        }
-        
 
         if (_PlayerBehaviour != PlayerBehaviour.Hard && _PlayerBehaviour != PlayerBehaviour.Repiaring)
         {
@@ -212,6 +231,14 @@ public class PlayerHackNetwork : EntityBehaviour<ICustomPlayerHackState>
 
             Debug.Log(evnt.Message);
         }
+
+        if (Input.GetMouseButtonDown(2))
+        {
+            BoltNetwork.Instantiate(SkillEffect, transform.position, transform.rotation);
+            Invoke("StopSkill" , 0.8f);
+            state.IsSkill = true;
+            _PlayerBehaviour = PlayerBehaviour.Skill;
+        }
         
         /*
 
@@ -247,6 +274,21 @@ public class PlayerHackNetwork : EntityBehaviour<ICustomPlayerHackState>
         }
     }
 
+    private bool AllComputerCompelet()
+    {
+        bool IsAllComputer = true;
+
+        for (int i = 0; i < _computersList.Length; i++)
+        {
+            if (!_computersList[i].GetCompeletFixed())
+            {
+                IsAllComputer = false;
+            }
+        }
+
+        return IsAllComputer;
+    }
+
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.red;
@@ -259,5 +301,10 @@ public class PlayerHackNetwork : EntityBehaviour<ICustomPlayerHackState>
     {
         state.IsAttack = false;
         _PlayerBehaviour = PlayerBehaviour.IDLE;
+    }
+
+    public void StopSkill()
+    {
+        state.IsSkill = false;
     }
 }

@@ -8,7 +8,6 @@ public class AddUserName : MonoBehaviour
     public void SetPlayerPrefabs()
     {
         PlayerPrefs.SetString("UserName", name.text);
-
         Debug.Log(name);
     }
 }

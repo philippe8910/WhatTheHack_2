@@ -1475,7 +1475,7 @@ MonoBehaviour:
   PlayerMask:
     serializedVersion: 2
     m_Bits: 25600
-  SkillEffect: {fileID: 0}
+  SkillEffect: {fileID: 6930774432105167891}
   _animator: {fileID: 8420949427981864413}
   PlayerSprite: {fileID: 8420949427981864414}
   RUN: HackRUN
@@ -1719,6 +1719,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 83bd87351716ba949b67b8507be4f471, type: 3}
+--- !u!1 &6930774432105167891 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8185104246469723416, guid: 83bd87351716ba949b67b8507be4f471, type: 3}
+  m_PrefabInstance: {fileID: 1276869803124095243}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &170389857250289919 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1433555347357422068, guid: 83bd87351716ba949b67b8507be4f471, type: 3}

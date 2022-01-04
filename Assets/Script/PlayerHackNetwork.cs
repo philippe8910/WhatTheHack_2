@@ -259,6 +259,19 @@ public class PlayerHackNetwork : EntityBehaviour<ICustomPlayerHackState>
             Invoke("StopSkill" , 0.8f);
             state.IsSkill = true;
             _PlayerBehaviour = PlayerBehaviour.Skill;
+            
+            if (Physics2D.OverlapCircle(AttackRange.position , AttackRangeValue , PlayerMask))
+            {
+                var evnt = PlayerOnAttackEvent.Create();
+
+                string name = Physics2D.OverlapCircle(AttackRange.position, AttackRangeValue, PlayerMask).GetComponent<PlayerNetwork>().GetName();
+                evnt.Message = name;
+                evnt.MyProflie = Physics2D.OverlapCircle(AttackRange.position, AttackRangeValue, PlayerMask)
+                    .GetComponent<BoltEntity>();
+                evnt.Send();
+
+                Debug.Log(evnt.Message);
+            }
         }
         
         /*

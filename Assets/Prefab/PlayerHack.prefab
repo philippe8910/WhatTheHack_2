@@ -59597,6 +59597,7 @@ RectTransform:
   - {fileID: 4048008348503009890}
   - {fileID: 3041982572841953864}
   - {fileID: 4481775805868589793}
+  - {fileID: 3506193536634355129}
   m_Father: {fileID: 8446910408928176842}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -69826,7 +69827,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af3f87267b0547544852c272716dbd5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MoveSpeed: 15
+  MoveSpeed: 25
   AttackRangeValue: 2.16
   IsDie: 0
   _PlayerBehaviour: 0

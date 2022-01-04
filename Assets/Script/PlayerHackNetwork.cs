@@ -90,6 +90,11 @@ public class PlayerHackNetwork : EntityBehaviour<ICustomPlayerHackState>
         if (entity.IsOwner)
         { 
             StateMachineControll();
+            
+            if (Input.GetKeyDown(KeyCode.O))
+            {
+                BoltNetwork.LoadScene("END_1");
+            }
         }
         
         ControllAnimator();
@@ -123,10 +128,7 @@ public class PlayerHackNetwork : EntityBehaviour<ICustomPlayerHackState>
             PlayerHud.gameObject.SetActive(true);
         }
 
-        if (Input.GetKeyDown(KeyCode.O))
-        {
-            BoltNetwork.LoadScene("END_1");
-        }
+        
     }
 
     private void OnCollisionEnter2D(Collision2D other)

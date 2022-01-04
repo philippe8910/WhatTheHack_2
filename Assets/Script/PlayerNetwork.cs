@@ -301,4 +301,9 @@ public class PlayerNetwork : EntityBehaviour<ICustomPlayerState>
         state.Animator.Play(DIE);
         _PlayerBehaviour = PlayerBehaviour.Die;
     }
+
+    public bool ReturnStateIsDie()
+    {
+        return state.IsDie;
+    }
 }

@@ -1088,6 +1088,7 @@ MonoBehaviour:
   IDLE: HackIDLE
   HARD: ATTACK
   _computersList: []
+  PlayerNetworks: []
 --- !u!114 &3423455319813729219
 MonoBehaviour:
   m_ObjectHideFlags: 0

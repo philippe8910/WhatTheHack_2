@@ -759,7 +759,7 @@ MonoBehaviour:
   PlayerName: 
   OrginalSpeed: 10
   MoveSpeed: 0
-  Dashtime: 8
+  Dashtime: 0.2
   Dashpower: 4
   IsDie: 0
   IsDashing: 0

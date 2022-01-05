@@ -552,6 +552,7 @@ MonoBehaviour:
   Dashpower: 0
   IsDie: 0
   IsDashing: 0
+  CanDash: 0
   _PlayerBehaviour: 0
   rigidbody2D: {fileID: 0}
   FixComputers: {fileID: 0}

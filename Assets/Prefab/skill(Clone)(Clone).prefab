@@ -38490,7 +38490,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _sceneGuid: 
   _serializerGuid: 906b58e0-4086-4033-a671-2ce756c5fdf6
-  _prefabId: 7
+  _prefabId: 8
   _updateRate: 1
   _autoFreezeProxyFrames: 0
   _clientPredicted: 1

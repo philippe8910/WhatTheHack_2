@@ -15,10 +15,10 @@ EditorBuildSettings:
     path: Assets/Scenes/WaitLobby.unity
     guid: c4c8a62ef2dbf3345aea624f3a186e25
   - enabled: 1
-    path: Assets/Scenes/GoodEndMenu.unity
+    path: Assets/Scenes/BadEndMenu.unity
     guid: 90929edc56e0bc84ab3902835dcac1a7
   - enabled: 1
-    path: Assets/Scenes/BadEndMenu.unity
+    path: Assets/Scenes/GoodEndMenu.unity
     guid: 73d965803cbf632418164b40a7bf7d56
   - enabled: 0
     path: 

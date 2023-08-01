@@ -26,3 +26,6 @@
 
 ## 關於我們：
 南台科技大學 102屆畢業生 南同俱樂部 三年級的專題OwO
+
+## 遊玩影片：
+[![IMAGE ALT TEXT](http://img.youtube.com/vi/qtVlvAbYyiE/0.jpg)](https://www.youtube.com/watch?v=qtVlvAbYyiE "Unity Snake Game")

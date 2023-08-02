@@ -26,7 +26,7 @@
 《What The Hack》的開發團隊希望打造一款連線策略遊戲，提供玩家們在PC平台上的對戰體驗。團隊專注於遊戲平衡和多人互動，讓玩家能夠以軟星人或駭客的身分參與遊戲，並在對抗中展現策略和技巧。軟軟星的故事背景和結局分岐為遊戲增添了劇情元素，讓玩家能夠沉浸於遊戲世界中的精彩戰鬥之中。
 
 ## 關於我們：
-南台科技大學 102屆畢業生 60919 三年級的專題OwO
+南台科技大學 112屆畢業生 60919 三年級的專題OwO
 
 ## 遊玩影片：
 [![IMAGE ALT TEXT](http://img.youtube.com/vi/qtVlvAbYyiE/0.jpg)](https://www.youtube.com/watch?v=qtVlvAbYyiE "Unity Snake Game")
